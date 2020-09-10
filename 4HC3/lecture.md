@@ -10,7 +10,7 @@
 
 Why do you think the design for this telephone performed better than a rotary phone?
 
-![image-20200910113204708](/home/jacob/school/4HC3/images/lecture/image-20200910113204708.png)
+![image-20200910113204708](images/lecture/image-20200910113204708.png)
 
 Smaller learning curve, easier to use, don't need to use rotary dial
 

@@ -55,11 +55,11 @@ Final		40%
 - ==**firm** RTS==$:=$ one in which missing a few deadlines will not lead to total failture, but missing more than a few may lead to a complete and catastrophic failure
 - ==**hard** RTS== $:=$ one in which failure to meet a single deadline may lead to complete and catasrophic system failure
 
-![image-20200910125532500](/home/jacob/school/4AA4/images/lecture/image-20200910125532500.png)
+![image-20200910125532500](images/lecture/image-20200910125532500.png)
 
 ##### Examples of RTS
 
-##### ![image-20200910130108808](/home/jacob/school/4AA4/images/lecture/image-20200910130108808.png)
+##### ![image-20200910130108808](images/lecture/image-20200910130108808.png)
 
 ##### Comments About RTS
 
@@ -80,7 +80,7 @@ Final		40%
 
 #### Kernel and Kernel Space
 
-![image-20200910131209713](/home/jacob/school/4AA4/images/lecture/image-20200910131209713.png)
+![image-20200910131209713](images/lecture/image-20200910131209713.png)
 
 #### User and kernel ( or Supervisor ) Modes
 
@@ -110,7 +110,7 @@ Final		40%
 
 #### System Call and Argument Passing
 
-![image-20200910132304696](/home/jacob/school/4AA4/images/lecture/image-20200910132304696.png)
+![image-20200910132304696](images/lecture/image-20200910132304696.png)
 
 #### Real-Time Operating System (RTOS)
 
@@ -134,6 +134,6 @@ Final		40%
 
 #### OS v. RTOS
 
-![image-20200910132705899](/home/jacob/school/4AA4/images/lecture/image-20200910132705899.png)
+![image-20200910132705899](images/lecture/image-20200910132705899.png)
 
 Linux is not an RTOS
