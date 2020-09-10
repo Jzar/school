@@ -1,25 +1,25 @@
-# Applied Stats & Probablity for Eng
+# Applied Stats & Probability for Eng
 
 ## Chapter 2: Probability
 
 **Goals**: 
 
-1. Understand sample spaces & events for random experiements via graphs
-2. Interpret probablitities and use them to calculate event probablities in discrete sample spaces
-3. Permuations and combinatorics
-4. Joint event probablities and intersections from probablitilies of individual events
-5. Conditional Probablities
-6. Determine the independence of events and use independence to caluclate probablities
-7. Use Bayes' theorem for Conditional Probablitlies
+1. Understand sample spaces & events for random experiments via graphs
+2. Interpret probabilities and use them to calculate event probabilities in discrete sample spaces
+3. Permutations and combinatorics
+4. Joint event probabilities and intersections from probabilities of individual events
+5. Conditional Probabilities
+6. Determine the independence of events and use independence to calculate probabilities
+7. Use Bayes' theorem for Conditional Probabilities
 8. Describe random variables and the difference between continuous and discrete random variables
 
 
 
 ### 2.1 Sample Spaces and Events
 
-#### 2.1.1 Random Experiements 
+#### 2.1.1 Random Experiments 
 
-**==Random Experiment==** $:=$ An experiement that can result in different outcomes, even though it is repeated in the same manner every time
+**==Random Experiment==** $:=$ An experiment that can result in different outcomes, even though it is repeated in the same manner every time
 
 
 

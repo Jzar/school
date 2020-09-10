@@ -22,7 +22,7 @@ Smaller learning curve, easier to use, don't need to use rotary dial
 
 - **Non-Functional requirements** $:=$ criteria by which to judge operation of a system
 
-- UI design goals are closely related to the idea of **non-functional requirements** (aka **quality** **attriubtes**)
+- UI design goals are closely related to the idea of **non-functional requirements** (aka **quality** **attributes**)
   - UI Design goals are a subset of non-functional requirements
   - Though functionality (range of operations)
 - ==NOT-FINISHED==
@@ -33,9 +33,9 @@ Smaller learning curve, easier to use, don't need to use rotary dial
 
 
 
-- Another common taxnomy comes from "*Ergonomics of human-system interaction*"(ISO 9241-11:2018)
+- Another common taxonomy comes from "*Ergonomics of human-system interaction*"(ISO 9241-11:2018)
 
-- Usability is defined as "the extent to which a system, product or service can be used by specified users to achieve specified goals with **effectiviness, efficiency and satisfaction**"
+- Usability is defined as "the extent to which a system, product or service can be used by specified users to achieve specified goals with **effectiveness, efficiency and satisfaction**"
 
 
 
@@ -50,10 +50,10 @@ Smaller learning curve, easier to use, don't need to use rotary dial
 
 
 
-- **Trade-offs** occur when we sacrafice quality in one goal to improve quality for another goal
+- **Trade-offs** occur when we sacrifice quality in one goal to improve quality for another goal
 - For virtually all user interfaces of enough sophistication, trade-offs become necessary
   - The trade-offs may not be though about consciously, they may occur implicitly, but they exist
-- Making the "right" trade-off decisions is critically important to the successs of a system
+- Making the "right" trade-off decisions is critically important to the success of a system
 
 
 
@@ -65,7 +65,7 @@ ex. Wifi Hotspot menu in iOS or Android
   | -------------- | --------------------------------------- | --------------------------------------- |
   | Functionality  | more options, more ability to customize | fewer options, decisions made for users |
   | Performance    | Need to                                 |                                         |
-  | Error Rates    |                                         | won't allow you to misconfigure         |
+  | Error Rates    |                                         | won't allow you to mis-configure        |
 
   
 
@@ -94,14 +94,14 @@ ex. Wifi Hotspot menu in iOS or Android
 
 
 
-#### Subjective satisfaction, trustability
+#### Subjective satisfaction, trustibility
 
 - Surveys can help make it objective
   - "I liked using this interface" with Yes/ No responses
   - Likert scale questions
     Pick from different options (Strongly disagree, agree, etc. 1-N for N categories)
 
-#### Learnability & Retention
+#### Learnibility & Retention
 
 - Perform an experiment ??
 - ???
