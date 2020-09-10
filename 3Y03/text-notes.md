@@ -25,9 +25,8 @@
 
 Randomness can exist in experiments through small variation in variables that are not controlled for in an experiment. This will result in a different outcomes from similar initial conditions.
 
-![image-20200909113429345](/home/jacob/school/3Y03/images/text-notes/image-20200909113429345.png)
+![image-20200909113429345](images/text-notes/image-20200909113429345-1599772716170.png)Statistical models need not be perfect abstractions: ( Newton's Laws are not perfect)
 
-- Statistical models need not be perfect abstractions: ( Newton's Laws are not perfect)
 - Given a mathematical abstraction that is validated with measurements from our system, we can use the model to understand, describe, and quantify important aspects of the physical system and predict the response of the system to inputs.
 
 
