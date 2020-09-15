@@ -106,10 +106,72 @@ ex. Wifi Hotspot menu in iOS or Android
 - Perform an experiment ??
 - ???
 
-
-
 Measuring goals is very related to testing user interfaces, a toopic we'll dive into more later
 
 - A host of techniques exist to test interfaces, which ***themselves*** have trade-offs in terms of their performance, ease of use, etc.
 
 - Suffice to say it is possible to measure goals, even realtively subjective ones
+
+## Lecture 2 2020-09-11
+
+#### Sketches 
+
+![image-20200911114110272](images/lecture/image-20200911114110272.png)
+
+- **==Sketches==** $=$ are hand-drawn representations of user interface designs
+  - Sketches have ***virtually zero barrier to entry***
+    - Even a non-technical customer/user can sketch
+    - Anybody can sketch
+  - Sketches are very **low fidelity** 
+    - Prototyping methods often ranked from low fidelity to high fidelity
+    - Lower fidelity means low lovel of detail 
+
+#### Wireframes
+
+- Wireframes accurately represent interface page layout and organization of content
+  - But lack colour, typography, images and graphics
+  - i.e. ***blueprints***
+- Increased *precision* over sketeches and use of software makes wireframes less accessible than sketches
+- More time consuming to create than sketches, but relatively ***higher fidelity***
+
+**Wireframe** = structure + functions + content 
+
+#### Mockup
+
+Mockup = static but accurate representations of the application interface
+
+- Colour, typography, and graphics *should* be included
+- Mockups are not interactive, cannot click and perform actions
+- Equivalent to screen captures
+
+Much more time consuming than wireframes, but very high fidelity
+
+#### Prototypes
+
+- Prototypes are an accurate ***and*** iteractive representation of the application interface
+  - We can perform actions in a prototype and the result should be the same in the full working application
+- Difference between prototype and completed application?
+  - Not connected to a back-end and the logic is hardcoded
+- Highest fidelity, and most time intensive to create
+- Created with the same tools as the completed application
+  - HTML, CSS, JavaScript, etc.
+- They may also be created with purpose built tools that allow for code-free experiences
+- **Fully functional in terms of UI**
+
+
+
+#### Tools
+
+- Sketches:
+  - Pen, paper, whiteboard
+- Wireframes
+  - wireframe.cc
+  - draw.io
+- Mockups
+  - GIMP
+  - HTML,CSS
+- Prototypes
+  - Sketch, Proto.io, Moqups
+  - HTML,CSS,JavaScripts
+
+![image-20200911121050964](images/lecture/image-20200911121050964.png)
