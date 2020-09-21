@@ -84,7 +84,7 @@ Why do you think the design for this telephone performed better than a rotary ph
 - **==Retention==** - When users *return* to the design after a period of time, how easily can they **re-stalish proficiency**
   - Can call this goal ***memorability***
 
-- **==Performance==** - Once users have learned the design, **how quickly** can they perform tasks?
+- **==Performance==**s - Once users have learned the design, **how quickly** can they perform tasks?
 - **==Error Rates==** - **How many** errors do users make? **How severe** are these errors? **How easily** can they *recover* from the errorrs?
 - **==Subjective Satisfaction==** - **How pleasant** is it to use the design?
 - **==Accessibility==** - **How accessible** is the interface to users with different disabilities?

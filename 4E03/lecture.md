@@ -212,3 +212,165 @@ What have $P\{A\} = 0.0001$ and $P\{B|A\} = 0.99$, but do not have $P\{B\}$. To 
     $p_x{k} = \dfrac{e^{-\lambda}\lambda^k}{k!}, k \in \mathbb{Z^{0+}}$
 
   - Sums to one: $\sum_{k=0}^{\infin}e^{-\lambda}\dfrac{\lambda^k}{k!}$
+
+## Lecture 4 | 2020-09-16
+
+### Further Distributions
+
+#### Uniform Distribution 
+
+- **==Uniform Distribution==** := $U(a,b)$ and has density:
+
+  ![image-20200917163954181](images/lecture/image-20200917163954181.png)
+
+  - The **random variable** is *equally likely* to take values anywhere between *a* and *b*. This **does not** mean that $P\{X=i\} = P\{X=j\}$ although this is trivially true. It does mean, for examples $P\{0.1 \leq X \leq 0.2\} = P\{0.3 \leq X \leq 0.4 \}$ (assuming $a \leq 0.1 \land b \geq 0.4$)
+  - **Special case**: $U(0,1)$ as many built in random number generators produce samples from this distribution
+
+  ![image-20200917164343294](images/lecture/image-20200917164343294.png)
+
+#### Exponential Distribution
+
+- **==Exponential Distribution==** : X = $Exp(\lambda)$
+
+  - One parameter, ***rate*** $:= \lambda$ 
+
+  ![image-20200917164546720](images/lecture/image-20200917164546720.png)
+
+We can see why the term "***rate***" is used for **$\lambda$** ; think of $X$ as measuring some length of time
+
+##### Examples
+
+- Jobs arriving to a server have CPU time that is *exponentially* distrbuted with mean **140 msec**. The CPU scheduling discipline is quantum-oriented, so that a job not completing within **100 msec** will be routed back to the tail of the queue of waiting jobs. Find the probability that a job has to wait for a ***second quantum***.
+
+1. Want to find: **probability a second quantum is needed**
+
+   Let X be CPU time : \lambda = \frac{1}{140}
+
+   $X \sim  Exp(\dfrac{1}{140})$ 
+
+   $P(X > 100) = 1 - P(X \leq 100)$
+
+   = $1 - (F_x(100) - F_x(-\infin))$
+
+   = $1 - ( 1 - e ^{-\lambda x } - 0)$ 
+
+   = 1 - ( 1 - $e^{\dfrac{-100}{140}}$)
+
+   = $e^{\dfrac{-100}{140}}$
+
+   = 0.4895
+
+- Suppose that **800 jobs** arrive in a particular time interval, how many are **expected to finish** within the ***first quantum***?
+
+  $P\{X \leq 100\} = 1 - P\{X > 100\}$
+
+  $ = 1 - 0.4895$
+
+  $= 0.5105$
+
+  Probability for one job to finish in first quantum, to get for 800 jobs, 
+
+  800 * 0.5105 = 408.4 jobs should finish in the first quantum
+
+#### Memoryless Property of the Exponential Distribution
+
+- Suppose that $X \sim Exp(\lambda)$
+- Suppose that we know X > b; What is the *probablitity* that $X > a + b$ (only makes sense if $a \geq 0$)
+
+![image-20200917172045118](images/lecture/image-20200917172045118.png)
+
+which is *exactly the same* as $P\{X > a\}$
+
+- The future is ***independent*** of the past, given the present. 
+  - Knowing that time *b* has elapsed gives no information about the future
+- **Exponential distribution** is the *only* ***continuous*** distribution with the **memoryless** property
+- Often used to model phenomena with this property: if we assume memoryless, then the underlying distribution is exponential
+
+#### In-Lecture Demo
+
+- Given a data centre with 8 servers, which server should we send any arriving data to? What if we want to turn off servers or one of them fails? What is the performance of all this and how can we show it?
+
+  - Performance can be given by:
+
+    - Low latency
+    - Response time
+    - Failure rate
+    - Energy efficiency
+    - Server usage
+    - Throughput
+    - Load balancing
+
+  - What to do if we want to evaluate any of the above performance metrics?
+
+    - One method is the **workload model**, look at the frequency of arrivals, processing time
+
+  - Note for measuring response times, each job has a different response time, how to still show this?
+
+    - Low mean (E[R])
+
+    - Low 95% percentile
+
+      
+
+      P(R≤T)≥0.95P(R≤T)≥0.95
+
+      - Could be 99%, or any percentage
+
+- Lets look at an example with different schemes for handling requests
+
+  - Scheme 1:
+    E[R1]=1E[R1]=1
+    Var(R1)=2Var(R1)=2
+
+  - Scheme 2:
+
+    
+
+    E[R1]=1.1E[R1]=1.1
+
+    
+
+    Var(R1)=0Var(R1)=0
+
+    - 2 has no randomness, always returns in 1.1, whereas 1 has a large amount of randomness, sometimes returning very low or very high response times
+
+- This can also be seen on some of the slides
+
+### Stochastic Models
+
+- May want to capture how a system evolves using *dependent* random variables, described by some dynamics. A very simple model that’s widely applicable is a **Discrete Time Markov Chain**, which has been used for web page navigation, speech recognition, ML, etc.
+
+## Lecture 5 | 2020-09-17
+
+### Intro Example
+
+- Consider the following scenarios
+
+  - 3 web pages that link to each other, **A,B,C**
+  - ***A*** has links to ***B*** and ***C***
+  - ***B*** has a link to ***C***
+  - ***C*** has links to ***A*** and ***B***
+  - When a user leave ***A***, **1/3** of the time a link to ***B*** is made, otherwise the link ***C***
+  - ***B*** always links to ***C***
+  - ***C*** links to ***A*** or ***B*** with **equal probability**
+
+  Q: what *proportion of visits are made to each of the pages*?
+
+### Discrete-Time Systems
+
+- **==Discrete-Time Systems==** : the *nth* time point corresponds to the *nth* event
+  - Natural for some settings - a ***continuous-time*** framework may be more suitable
+
+#### Discrete-Time Markov Chains
+
+- **==Discrete-Time Markov Chains==** = **stochastic process** (${X_n, n =0,1,2, ...}$), where $X_n$ denotes the state at (***discrete***) time step *n* and such that $\forall n \geq 0, \forall i_0, ... , i_{n-1}$:
+
+$P\{X_{n+1} = j | X_{n-1} = i_{n-1}, ..., X_0 = i_0\} = P\{X_{n+1} = j + X_n = i\} = P_{ij}$
+
+- **Stationarity =** statistics of process independt of time - $P_{ij}$ is independent of the time step and of history
+  - The previous time step is a perfect representation of all the states previously`
+
+
+
+
+
