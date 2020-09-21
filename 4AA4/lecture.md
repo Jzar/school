@@ -509,5 +509,6 @@ int main ()
     while(!stopped);
     	pthread_join(thread, NULL);
 	return 0;
+}
 ```
 
