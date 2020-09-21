@@ -43,17 +43,17 @@ Final		40%
 
 #### Real Time Systems (RTS)
 
-- Response time
-  - Time interval between a stimulus (or input) and the corresponding response (or output)
+- **Response time**
+  - Time interval between a *stimulus* (or **input**) and the *corresponding response* (or **output**)
 - A real time system
   - System where a **timely** response to external stimuli is vital
   - What is meant by **timely**?
 
 ##### Classifications of RTS
 
-- ==**soft** RTS==$:=$ one in which performance is degraded but not destroyed by failure to meet response-time contraints
-- ==**firm** RTS==$:=$ one in which missing a few deadlines will not lead to total failture, but missing more than a few may lead to a complete and catastrophic failure
-- ==**hard** RTS== $:=$ one in which failure to meet a single deadline may lead to complete and catasrophic system failure
+- ==**soft** RTS==$:=$ one in which performance is *degraded* **but not** *destroyed* by failure to meet response-time contraints
+- ==**firm** RTS==$:=$ one in which missing a few deadlines **will not lead to total failture**, but *missing more than a few may lead to a complete and catastrophic failure*
+- ==**hard** RTS== $:=$ one in which **failure to meet a single deadline** may lead to complete and catasrophic system failure
 
 ![image-20200910125532500](images/lecture/image-20200910125532500.png)
 
@@ -328,4 +328,186 @@ int main(int argc, char *argv[])
 ```
 
 
+
+## Lecture 5 
+
+### After fork() is Called
+
+- Can child process acccess the data created by parent process before fork()?
+
+  - **Yes**, but the modification can be seen ***only in child process*** and the value in the **parent** **will not** be changed
+
+- Is data allocated on the heap (*dynamically allocated memory*) before **fork()** call is also available to the child?
+
+  - Yes 
+
+  ```c
+  #include <stdio.h>
+  #include <stdlib.h>
+  #include <string.h>
+  #include <sys/types.h>
+  
+  int main(){
+      pid_t pid;
+      char * str;
+      str = malloc(100);
+      strcpy(str, "Hello");
+      pid = fork();
+      
+      if(pid == 0){
+          printf("in child, the string is: %s\n", str);
+          strcpy(str, "Goodbye"); //this will add goobye to the child process
+          printf("in child, the string is: %s\n", str);
+          free(str);
+      }
+      
+      else if(pid >0 ){
+          printf("In Parent, the string is: %s\n",str);
+          sleep(1);
+          print("in Parent, the string is: %s\n",str);
+          free(str);
+      }
+      
+      else 
+          printf("error with fork()\n")
+  
+      return 0;
+  }
+  ```
+
+  ![image-20200921130431614](images/lecture/image-20200921130431614.png)
+
+
+
+### Race Conditions
+
+- **==Race Conditions==** = An error condition in parallel programs in which the outcome of a program changes as the relative scheduling of different control flow varies
+  - Can happen where the **ordering of events** can affect the outcome of some computation
+  - Why is it bad? We need progaams that are**predictable**, and **repeatable**
+
+#### Example 1
+
+```c
+#include <stdio.h>
+#include <pthread.h>
+
+void *aThread(void *var)
+{
+    int* num = (int*) var;
+    (*num)++;
+    pthread_exit(NULL);
+}
+
+int main(int argc, char *argv[])
+{
+    pthread_t thread;
+    int rc, i=1;
+    if(rc = pthread_create(&thread, NULL, aThread,(void *) &i))
+    {
+        printf("ERROR; return code from pthread_create() is %d\n",rc);
+        return -1;
+    }
+    
+    else
+    {
+        sleep(1);
+        printf("The value of i is %d\n",i)
+		return 0;
+    }
+}
+
+
+```
+
+
+
+- What is the output?
+- What is the output if we remove "sleep(1);"?
+  - Race condition!
+
+
+
+#### Example 2
+
+```c
+#include <stdio.h>
+#include <pthread.h>
+
+int g = 0;
+
+void *aThread()
+{
+    g++;
+    sleep(1);
+    pthread_exit(NULL);
+}
+
+int main(int argc, char *argv[])
+{
+    int i;
+    pthread_t thread[20];
+    for(i=0; i<20; i++)
+    {
+        if(pthread_create(thread+i, NULL, aThread, NULL))
+        {
+            printf("ERROR; return code from pthread_create()\n")
+            return -1;
+        }
+	printf("The value of g is %d after creating thread %d\n", g, i);
+    }
+    
+    return 0;
+}
+```
+
+##### Possible Output:
+
+![image-20200921131735723](images/lecture/image-20200921131735723.png)
+
+### Event Driven Program
+
+- **==Event Driven Programming==** = [programming paradigm](https://en.wikipedia.org/wiki/Programming_paradigm) in which the [flow of the program](https://en.wikipedia.org/wiki/Control_flow) is determined by [events](https://en.wikipedia.org/wiki/Event_(computing)) such as user actions ([mouse](https://en.wikipedia.org/wiki/Computer_mouse) clicks, key presses), [sensor](https://en.wikipedia.org/wiki/Sensor) outputs, or [messages](https://en.wikipedia.org/wiki/Message_passing) from other programs or [threads](https://en.wikipedia.org/wiki/Thread_(computer_science))
+
+- Two examples implementing the same functionality
+- 
+
+```c
+#include<stdio.h>
+#include<pthread.h>
+#include<stdlib.h>
+#include<signal.h>
+
+intr1=0;
+intr2=0;
+intsum=0;
+intstopped=0;
+void *myThread()
+{
+    inti;
+    for(i=0; i<5; i++)
+    {
+        sleep(1);
+        time_tt;
+        //initialize random number generator
+        srand((unsigned) time(&t));
+        r1=rand();
+        r2=rand();
+        sum=r1+r2;
+        printf("i=%d, Sum=%d\n", i,sum);
+    }
+    stopped=1;
+    pthread_exit(NULL);
+}
+int main ()
+{
+    pthread_tthread;
+    if( pthread_create(&thread, NULL, myThread, NULL) )
+    {
+        printf("ERROR; return code from pthread_create()\n");
+        return -1;
+    }
+    while(!stopped);
+    	pthread_join(thread, NULL);
+	return 0;
+```
 
