@@ -369,8 +369,66 @@ $P\{X_{n+1} = j | X_{n-1} = i_{n-1}, ..., X_0 = i_0\} = P\{X_{n+1} = j + X_n = i
 
 - **Stationarity =** statistics of process independt of time - $P_{ij}$ is independent of the time step and of history
   - The previous time step is a perfect representation of all the states previously`
+- **Last Equality** = stationarity 
 
+- **==Markovian Property==** = the *conditional distribution* of any future state $X_n+1$ , given past states $X_0,X_1,..,X_{n-1}$ and the present state $X_n$, is ***independent of past states and depends only on the present state $X_n$*** 
+  - **$P$** = ***transition probablity matrix***
+  - $P_{i j}$ is the probablity of state of moving to **state j** *from* **state i** ($P\{x_j| x_i \}$)
+  - $P$ may have **infinite dimensions**
+  - $P$ is square
+  - Rows of $P$ sum to one 
+    - *the system much be at some state at each step!*
+  - $P_{ii} > 0 $ *is **possible*** 
 
+#### Umbrella Problem
 
+- Ab absent-minded professor has **two umbrellas** that are used making trips from home to work and back. If it *rains* and an **umbrella** is at the *current location* an **umbrella is taken**. If it is **not raining**, **no umbrella is taken**. It **rains** with probability *p* when each trip is made, independent of prior trips.
 
+   **Question**: determine the fraction of trips during which the professor gets wet
+
+###### Solution
+
+**state-space:** track the **number** of umbrellas at *current location*
+
+**state transition diagram on board**
+
+**transition probability matrix:**
+
+![image-20200921165258117](images/lecture/image-20200921165258117.png)
+
+Could model this with six states, where the state is the ordered pair that conissts of the number of umbrellas at home and the current location
+
+### *n-step* Transition Probabilities
+
+- Let $P^n = \displaystyle\prod^n p$ 
+
+- $P_{i j}^{n} := (i,j)$ entry of $P^n$
+
+  In general, if we know that the $(n-1)$ step transition probabilities are given by $P_{ik}^{n-1}$, then by exhaustive enumeration of all possibilities:
+
+  $P_{i j}^{n} = \displaystyle\sum^{M-1}_{k=0} P_{i k}^{n-1}P_{k j}$
+
+  This allows an inductive argument that the *n-step* transition probability of going from state *i* to state *j* is given by the (i,j) entry of $P^n$
+
+### Limiting Probabilities
+
+- **==Limiting Probabilities== ** - Let $\pi_j = \displaystyle\lim_{n \rarr \infin} P^n_{ij}$
+
+  - $\pi_j$ represents the *limiting probability* that the **DTMC** is in **stage *j***. 
+
+    For an ***M-state DTMC*** with states $\{0,1,...,M-1\}$
+
+    ![image-20200921172153584](images/lecture/image-20200921172153584.png)
+
+    is a *vector* of the **limiting probabilities** of being in *each* state
+
+  - not obvious that limit always exists
+
+  - not obvious that limiting probabilities form a distribution
+
+    - We will assume these for the purposes of this course
+
+#### Stationary Probability
+
+##  Lecture 6 | 2020-09-17
 

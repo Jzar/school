@@ -550,17 +550,17 @@ Try to limit a task's subtasks to **4-8*** subtasks
 
 **Process:**
 
-1. **Define task being analyzed:** as well as the purpose of the **task analysis**
+1. **Define task being analysed:** as well as the purpose of the **task analysis**
 
-2. **Conduct data collection**: Pay particular attention to areas such as *technology*, *machine* and *team member* iteraction, decision making, and *task constraints* to better understand the **process*
+2. **Conduct data collection**: Pay particular attention to areas such as *technology*, *machine* and *team member* iteration, decision making, and *task constraints* to better understand the **process*
 
 3. **Determine the overall goal of the task**: This should be in place at the top of the **task hierarchy**
 
-4. **Determine Task Sub-Goals**: Decompose the overall goal into *corresponding* **sub-goals**. Together, these subgoals should comprise the tasks necessary to accomplsih the overall goal
+4. **Determine Task Sub-Goals**: Decompose the overall goal into *corresponding* **sub-goals**. Together, these subgoals should comprise the tasks necessary to accomplish the overall goal
 
 5. **Perform Sub-Goal decomposition**: Subgoals should be further broken down into *additional* **subgoals** and **operations**.  Continue this process until you reach an appropriate operation, which specifies the action that actually needs to be done to accomplish the goal. There should always be an operation at the bottom level of *any* branch in a **HTA**
 
-6. **Develop Plan Analysis**: After describing all the subgoals and operations, add the plans. Plans explain how a goal should be accomplsihed. These may be in the format "do A, do B, do C"
+6. **Develop Plan Analysis**: After describing all the subgoals and operations, add the plans. Plans explain how a goal should be accomplished. These may be in the format "do A, do B, do C"
 
    
 
@@ -579,7 +579,7 @@ Try to limit a task's subtasks to **4-8*** subtasks
 
 - **==Convergent Thinking==** = Though process or method to make a *deliberate* and *conscious* choice. We purposefully apply criteria as we screen, select, evaluate, and refine options
 
-  - Analyze and filter
+  - Analyse and filter
   - Useful ideas
   - Make decisions
 
@@ -606,23 +606,23 @@ Convergent thinking and divergent thinking are often used as part of **design th
 #### Thinking Divergently
 
 - **Brainstorming**
-  - Classic undirected brainstorming, just write down whatever you think
+  - Classic un-directed brainstorming, just write down whatever you think
 - **Journal**
   - Keep a journal of ideas to write them as they occur
 - **Freewriting**
   - Write freely without structure or stopping 
 
 - **Mindset**
-  - Research shows we think divergently best when we are *happy, feel less pressue, less anxiety, well-rested*
+  - Research shows we think divergently best when we are *happy, feel less pressure, less anxiety, well-rested*
 
 - **Oxymoron**
   - Explore what happens when you remove what's most essential about a product or concept to generate new ideas
-- **Arbitrary Contraints**
+- **Arbitrary Constraints**
   - Set constraints and create designs within them
   - Forces more creative thinking
 - **Brainwriting**
   - Have everyone write down their own brainstorm, then share together afterwards
-  - Helps negate groupthink or going down a suboptimal path
+  - Helps negate groupthink or going down a sub-optimal path
 - **Lateral Thinking** - solving illogically
   - Random entry idea generating tool
   - Provocation
@@ -632,14 +632,210 @@ Convergent thinking and divergent thinking are often used as part of **design th
 - **Scamper**
   - **Substitute**: come up with another topic that is equivalent to present the topics
   - **Combine**: adds information to the original topic
-  - **Adjust**: identifies ways to contruct the topic in a more flexible and adjusted material
-  - **Modify**: Magnify,minify, creatively changes the topic or makes a feature/idea bigger or smaller
-  - **Put**: to other uses uses identifies the possible scenaries and situations where this topic can be used/implemented
-  - **Eliminate**: removes ideas or elements from the topic that are not valuebale
-  - **Reverse**: rearrange, evolves a new concept from the orignal concept
+  - **Adjust**: identifies ways to construct the topic in a more flexible and adjusted material
+  - **Modify**: Magnify,magnify, creatively changes the topic or makes a feature/idea bigger or smaller
+  - **Put**: to other uses uses identifies the possible scenarios and situations where this topic can be used/implemented
+  - **Eliminate**: removes ideas or elements from the topic that are not valuable
+  - **Reverse**: rearrange, evolves a new concept from the original concept
 
 #### Inspiration
 
 - Search for solutions similar to the problem you are solving
-- Note and categorize the different design features that the solutions are using
+- Note and categorise the different design features that the solutions are using
 - Attempt to combine these design features in new ways relevant to your problem
+
+## Lecture 6 | UI Design: Guidelines - 2020-09-22
+
+### UI Design Recap
+
+- *Sketches/wireframes/mockups/prototypes* **represent** our design
+- **User analysis** and **Task analysis** *inform* and *influence* our design
+- **Divergent thinking** helps us *create* and *explore* design space
+  - **Convergent thinking** is where we *make* **design decisions**
+
+Begs the question: ***how*** and ***why***? 
+
+
+
+### Design Decisions
+
+- **==Design Decisions==** = decisions we make during the design of an interface
+  - ex.
+    - Font / Font size
+    - Layout
+    - Colour
+    - Input
+
+##### *Making* Design Decisions
+
+**Strategies:**
+
+- **Intuition**: How do you know its a *good* design decision though?
+- **Experience:** How do you know there isn't a *better* way?
+- **Reference:** Is what *others* are doing the *best* way?
+- **Consensus:** Is the *crowd always right*? How to account for *group think?*
+
+**Consider:** how would you feel about using a **bridge** built on *intuition*? What about major        **surgery** based on *consensus*?
+
+- UI design *guidelines,principles,* and *theories* can also help us to guide **design decisions*
+  - Many are based on *empirical evidence*, though some are based on industry-wide experience, or other reasoning
+- Guidelines, principles, and theories can offer a more solid basis for many of other design decisions
+  - But they *can't* make **all** of our decisions for us
+
+### Guidelines, Principles, and Theories
+
+#### Guidelines
+
+- **==Guidelines==** = provide **low-level** advice about good practices and cautions against dangers
+  - **Do's and don't's**
+  - Tend to be specific to *application, device, or part of UI*
+
+##### Examples
+
+- **Standardise task sequences:** allow users to perform tasks in the *same sequence* and manner across similar conditions
+- **Ensure that links are descriptive:** When using links, the link text should accurately describe the link's destination
+- **Use unique and descriptive headings:** Use headings that are distinct from one another and conceptually related to the content they describe
+- **Use radio buttons for *mutually exclusive choices:*** When you need to choice one option
+- **Develop Pages that will print properly:** If users are likely to print one or more pages, develop pages with dimensions that print well
+- **Use thumbnail images to preview larger images:** When viewing full-size images is not critical, first provide a *thumbnail* of the image
+- **Increase Web Site Credibility:** Provide a ***FAQ***. Show the author's credentials. Provide citations. Ensure the site is frequently linked by other credible sites.
+- **Reduce the user's workload:** Allocate functions to take advantage of the *inherent respective strengths*
+
+- **==Principles==** = are **middle-level** strategies or rules to *analyse* and *compare* **design alternatives**
+
+- **==Theories==** = are **high-level** , *widely applicable* frameworks to draw on during design and *evaluation*. 
+
+  - Useful to support communication and teaching
+  - Can also be *predictive*, such as those pointing times by individuals or posting rates for community discussions
+
+  
+
+## Lecture 7| UI Design: Principles & Error Message Guidelines - 2020-09-24
+
+### Principles
+
+- ==**Principles**== = **middle-level** strategies or rules to analyse and compare design alternatives
+  - more *abstract* and require more interpretation than guidelines
+  - more *enduring* than guidelines: (**not** specific to OS, or device)
+
+##### 8 Golden Rules of Interface Design - (Ben Scheindermen)
+
+1.  ==**Strive for Consistency**==
+
+   - Similar sequences of actions for similar situations
+   - Use identical terminology across the application
+   - Limit the number of exceptions to consistency, ensure they are comprehensible 
+
+2. ==**Seek Universal Usability**==
+
+   - Account for user characteristics (*age, language, culture*)
+
+   - Account for **beginner** to **expert** users
+
+     - explanations, shortcuts or performance enhancements
+
+   - Design for transformation of content (text represents all media)
+
+     ![image-20200924114720693](images/lecture/image-20200924114720693.png)
+
+3. ==**Offer Informative Feedback**==
+
+   - Interface should provide feedback for user actions
+
+     - How do users know their action has been registered?
+
+       ![image-20200924114849951](images/lecture/image-20200924114849951.png)
+
+   - Feedback should be *inline* with the **frequency** and **importance** of the action 
+
+     - Minor, frequent actions can provide modest responses
+     - Major, infrequent actions can provide more extensive responses
+
+4. ==**Design Dialogues To Yield Closure**==
+
+   - After a series of actions, give users a sense of **closure** with information feedback
+
+   - Sequences of actions should have an organization from beginning, middle, to an end with closure
+
+     1. Select report type
+     2. Enter in details regarding report 
+     3. Produce report and present to user
+
+     ![image-20200924115030618](images/lecture/image-20200924115030618.png)
+
+5. ==**Prevent Errors**==
+
+   - Where ever possible, design the interface such that users ***cannot*** make mistakes
+   - If user make an error, interface should provide clear and constructive instructions ***to fix it***
+   - Preventing errors
+     - Disable or "grey out" options that aren't relevant
+     - Don't allow airplane engines to go in reverse unless the landing gear is down
+   - Force complete sequences of actions
+     - Either automate a series of actions after a user action
+     - OR make sure user *finishes* a sequences of actions
+       - If left half complete, have an alert to user to finish it
+
+6. ==**Permit Easy Reversal of Actions**==
+
+   - Wherever possible, **make actions reversible**
+   - Allow users to feel confident trying things
+   - Allow reversal of single actions but also groups of actions
+
+7. ==**Keep users in Control**==
+
+   - Users should always have sense that they are in control ***especially*** more experienced users
+   - Users **lose** control if:
+     - Cannot produce a desired result or obtain required information
+     - Are forced to go through a lengthy data entry process
+     - Interface behaviour change unpredictably
+   - Let users *skip* over content, move back and forward through a process, etc.
+
+8. ==**Reduce Short-Term memory load**==
+
+   - Users shouldn't need to remember information on one page and then use it on another
+   - Don't exceed the 7 $\pm$ 2 rule of short-term memory
+   - Break up lengthy forms and processes into logical subforms and processes
+
+#### Another Principle...
+
+- 8 Golden rules aren't the only principles
+- Another principle: **Ensure human control while increasing automation**
+- Increase automation of tasks as much as possible, and in the ways that **machines perform better**, but ensure **human control** is maintained, especially in the ways *humans* perform better
+
+| Human                                                      | Machine                                       |
+| ---------------------------------------------------------- | --------------------------------------------- |
+| Draws on strengths and experiences and adapt to situations | Rapid consistent response for expected events |
+| Select alternatives when first approach fails              | Process data with anticipated patterns        |
+| Make subjective value based judgements                     | Perform repetitive actions reliably           |
+| Develop new solutions                                      | Perform several actions simulataneously       |
+| Request help other humans                                  |                                               |
+
+
+
+#### Ensure Human Control While Increasing Automation
+
+- *Routine*, *predictable* tasks are generally better given to machines when possible
+  - Humans will get tired, make mistakes, etc.
+- Unpredictable and novel tasks are generally better given to humans when possible
+- The curve is always shifting on this trade-off
+- Air traffic control
+  - Much of the system of air traffic control is automated and for good reason
+  - What about a plane needing an emergency landing?
+  - What about a closed runway?
+- Air plane disasters sometimes occur from *too much automation* and not enough human control
+
+### Error Message Guidelines
+
+#### What are the characteristics of *good* error messages?
+
+- Make errors **explicit** and **clear** that it is an error that has taken place
+- Make them visible
+- **Don't** change application state too much in response
+- Place error message close to where the error has taken place
+- Text should target the *user* **not** the *programmer*
+- **Don't** blame the user, if anything, **blame the app**
+- ***tell the user how to fix the error!***
+- user "warmer" language, colour, and iconographpy
+- Does the error ***really*** need a big red X or stop sign? Do you even need the *word* error?
+- User humour! Humour can ease anxiety, and a delightful surprise instead of a pain point
+  - Don't go too far this can quickly cross over into being patronising to your user

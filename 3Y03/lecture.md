@@ -57,20 +57,20 @@ $S$ and $\empty$ are events, and $S' = \empty$ , given sample space $S$
     $P^n_r = n Pr = n (n -1 ) .... ( n - r + 1) = \dfrac{n!}{(n-r)!}$
 
     - r = length of sequence, n = size of set to draw from. 
-      
+  
 - Ex. number of 3 letter words with no repeats: $P_3^{26} = \frac{26!}{(26-3)!}$ = $26 * 25 *  24$
-      
+  
 - Not all objects may be unique, ex. "**BANANA**"
-    
+  
 - If all the letters were unique, there would be $6!$ perumtations, but since there are 3 As, and 2 Ns, some of the permutations leave the word unchanged
-    
+  
 - There are 3! ways to permute the A's and 2! ways to permute the Ns. If we "cancel" the permuations that do nothing, we have $\frac{6!}{3!2!}$ = 60 many unique permutations
-    
+  
 - Given $n = n_1 + n_2 + ... + n_r$ many objects with $n_i$ identical many objects of type i, there are
-    
+  
   $\dfrac{n!}{n_1!n_2!...n_r!}$
-    
-      
+  
+  ​    
 
 ### **Combinations**
 
@@ -537,3 +537,21 @@ $= (0 - 1.93)^2f(0) + (1-1.93)^2f(1) +(2 - 1.93)^2f(2)$
 $= 0.106624$
 
 $\sigma = \sqrt{V(X)} = \sqrt{0.106624}$
+
+## Lecture 7 | 2020-09-23
+
+## Examples
+
+![image-20200923104918962](images/lecture/image-20200923104918962.png)
+
+
+
+![image-20200923110127371](images/lecture/image-20200923110127371.png)
+
+
+
+## Lecture 8 | 2020-09-24
+
+#### Poisson Distribution
+
+![image-20200924104922647](images/lecture/image-20200924104922647.png)
