@@ -555,3 +555,6 @@ $\sigma = \sqrt{V(X)} = \sqrt{0.106624}$
 #### Poisson Distribution
 
 ![image-20200924104922647](images/lecture/image-20200924104922647.png)
+
+## Lecture 9 | 2020-09-28
+

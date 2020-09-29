@@ -81,11 +81,11 @@ Why do you think the design for this telephone performed better than a rotary ph
 
 - **==Learnability==** - How easy is it for users to accomplish *basic tasks* the **first** time 
 
-- **==Retention==** - When users *return* to the design after a period of time, how easily can they **re-stalish proficiency**
+- **==Retention==** - When users *return* to the design after a period of time, how easily can they **re-establish proficiency**
   - Can call this goal ***memorability***
 
 - **==Performance==**s - Once users have learned the design, **how quickly** can they perform tasks?
-- **==Error Rates==** - **How many** errors do users make? **How severe** are these errors? **How easily** can they *recover* from the errorrs?
+- **==Error Rates==** - **How many** errors do users make? **How severe** are these errors? **How easily** can they *recover* from the errors?
 - **==Subjective Satisfaction==** - **How pleasant** is it to use the design?
 - **==Accessibility==** - **How accessible** is the interface to users with different disabilities?
 - **==Functionality==** - **What range of operations** does the user interface support
@@ -215,10 +215,10 @@ Measuring goals is very related to testing user interfaces, a toopic we'll dive 
 
 ![image-20200917143909157](images/lecture/image-20200917143909157.png)
 
-- Wireframes accurately represent interface page layout and organization of content
+- Wireframes accurately represent interface page layout and organisation of content
   - But lack colour, typography, images and graphics
   - i.e. ***blueprints***
-- Increased *precision* over sketeches and use of software makes wireframes less accessible than sketches
+- Increased *precision* over sketches and use of software makes wireframes less accessible than sketches
 - More time consuming to create than sketches, but relatively ***higher fidelity***
 
 **Wireframe** = structure + functions + content 
@@ -839,3 +839,135 @@ Begs the question: ***how*** and ***why***?
 - Does the error ***really*** need a big red X or stop sign? Do you even need the *word* error?
 - User humour! Humour can ease anxiety, and a delightful surprise instead of a pain point
   - Don't go too far this can quickly cross over into being patronising to your user
+
+## Lecture 8 | UI Design: Component-based Front-end Architecture 
+
+### Why Component-Based?
+
+- Basic computing and software principle: 
+
+  - To build programs *that will scale*, we need to **separate** our code into different **modules** with *different concerns*
+  - **separation of concerns!**
+
+- We **sort of** get this with HTML, CSS, and JS
+
+  - HTML - structure
+  - CSS - style
+  - JavaScript -behaviour
+  - And we ***can*** further subdivide into different CSS files, include external libraries, etc.
+
+- But in practice, this approach only scales so far .... 
+
+- More **interactivity** means more **DOM** manipulation
+
+  - Querying tags based on IDs and classes and writing code that's all about sticking data inside them
+  - As opposed to code focused on layout, or structure, or solving our problem ... this type of code is some of the worst to write
+  - This isn't what HTML DOM was built for originall either, JS does this because it's needed, but its a bit hacky
+
+- DOM manipulation is ***expensive***:
+
+  - Causes browser to re-render
+  - Modern apps have ***VERY*** complex DOM trees ... hundreds of thousands of nodes, higher than ever tree depth, etc.
+  - Making many small DOM changes is ***not*** ideal
+
+- Let's say we make a "news feed" for Facebook profiles with HTML, CSS, JavaScript
+
+  - because we need the same news feed for groups, how do re-use that functionaility
+  - Not as easy as you would hope...
+    - We can use a technique called "HTML templating" on our server to help with this, constructing pages made up of HTML templates glued together and sending them
+    - Doesnt **scale** in terms of maintainability, we can end up with spaghetti code very easily
+
+- **Single Page Applications (SPA)** are a type of web app that only do one initial page load of HTML, CSS, and JavaScript
+
+  - Subsequent data or content that is needed is fetched by having JavaScript communicate with the server using:
+    - AJAX - http requests done in the backend
+    - WebSockets - bi-directional communication tech
+  - From the user's perspective, the ***entire page never refreshes***
+
+- **SPAs** provide a superior user experience
+
+  - Entire page doesn't reload in-response to actions
+  - Imagine if our phone and desktop apps did this 
+  - Leads to higher subjective satisfaction for users
+
+  **Trade off:** SPAs more technically difficult to build
+
+  **component** **based** *is more suited towards SPA*
+
+- For more on "why" we use them...
+
+  - Does your web app need a front-end?
+
+- Component-based frameworks developed in response to these problems
+
+  - Tread DOM manipulation completely differently
+  - Completely different separation of concerns
+  - ***allow for creation of reusable components of functionality***
+
+### Traditional Multipage Applications
+
+![image-20200925114026586](images/lecture/image-20200925114026586.png)
+
+### Single Page Application
+
+![image-20200925114059011](images/lecture/image-20200925114059011.png)
+
+### Big 3 Component Based Frameworks
+
+1. Vue
+   - Easiest to learn, super elegant code, instructor's favourite
+2. Angular
+   - Widely used, but has a "split ecosystem" between incompatible older and newer Angular version, documentation and learnabililty relatively harder 
+3. React
+   - Only slightly harder than Vue to learn, widely used in industry and we get React Native as a bonus
+
+#### React
+
+- Front end JS framework for interactive UI
+  - Developed in 2011 at Facebook
+  - Opensourced in 2013
+
+##### Virtual DOM
+
+- **Virtual DOM:**
+
+  - lightweight abstraction of the DOM
+  - essentially keeps a local and simplified copy of the DOM as part of its operation
+
+- **Change in App State:**
+
+  - does a *diff* between the last virtual DOM render
+  - Handles any required DOM updates efficiently
+
+- **Rendered** onto DOM at a specific element
+
+  - From there, React controls the DOM at this element
+
+  - In below example, `<h1>Hello,world!</h1>` is being **rendered by React** *into the div with id root*
+
+  - `<h1>Hello, world!</h1>` may *look* like HTML, but its actually **JSX** code
+
+    ```react
+    <div id="root"></div>
+    <script type ="text/babel">
+    	ReactDOM.render(
+        <h1>Hellow, world!</h1>,
+        document.getElementByID('root');
+        )
+    </script>
+    ```
+
+    
+
+#### React Components
+
+- We can create **components** like this:
+
+  ```react
+  class MyComponent extends React.Component{
+      render() {return <h1>Hello world</h1>}
+  };
+  ```
+
+  
+

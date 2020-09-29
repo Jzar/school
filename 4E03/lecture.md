@@ -428,7 +428,347 @@ Could model this with six states, where the state is the ordered pair that conis
 
     - We will assume these for the purposes of this course
 
+##  Lecture 6 | 2020-09-21
+
+Is there a better way to find $\pi_i$ as opposed to raising $P$ to a large number?
+
 #### Stationary Probability
 
-##  Lecture 6 | 2020-09-17
+- **==Stationary Probability==** = probability distribution $\pi$ is said to be **stationary** for a **DTMC** if:
+
+  $\pi P = \pi $ 	$\land $ $\displaystyle\sum^{M-1}_{i=0} \pi_i = 1$
+
+  - We refer to this set of equations as *the **stationary equations***
+
+    - Also written: 
+
+      $\displaystyle\sum^{M-1}_{i=0} \pi_i P_{ij} = \pi_j,\forall j \in (0,M-1)$
+
+      $\displaystyle\sum^{M-1}_{i=0} \pi _i= 1$
+
+  - The probability distribution $\pi$ is ***invariant*** of the **transition matrix** $P$, meaning the distribution is *unchanged* by the DTMC over time. 
+
+    - as a probability distribution, all the elements of $\pi$ must sum to 1
+    - For each probability in the distribution, when multiplied against its respective value in the transition matrix, still holds the property $\pi_i P_{ij} = \pi_j$, meaning the likelihood of moving from state i to state j has probability $\pi_j$, meaning its invariant of the state $\pi_i$, and invariant of the time, so $P_{ij}$
+
+### Key Theorem
+
+Give a *finite-state* ***DTMC*** with **M** states, let
+
+​			$\pi_j = \displaystyle\lim_{n \rarr \infin} P^n_{ij} > 0 $
+
+be the ***limiting probability*** of being in **state j**, and let 
+
+​			$\pi = \{\pi_0, \pi_1, ..., \pi_{M-1}\}$, where $\displaystyle\sum^{M-1}_{i=0}\pi_i$
+
+be the ***limiting distribution***. Assuming the **limiting distribution** exists, then $\pi$ is also a **stationary distribution**, and *no other **stationary distribution*** exists**
+
+#### Proof
+
+- First, we show that a **limiting distribution** satisfies the **stationary equations**
+
+  $\pi_j = \displaystyle\lim_{n \rarr \infin} P^{n+1}_{ij}$
+
+  ![image-20200928165501504](images/lecture/image-20200928165501504.png)
+
+- Next, we show that *any* solution to the **stationary equations** *must* be equal to the **limiting distribution**
+
+  Suppose that **$\pi'$** is a **stationary distribution** and we start with **initial state** having distribution $\pi'$:
+
+  ​	$\pi_j' = P\{X_n = j\}, \forall n$
+
+  $= \displaystyle\sum_{i=0}^{M-1} P\{X_n=j | X_0 =i\} P\{X_o = i\}, \forall n$
+
+  $= \displaystyle\sum_{i=0}^{M-1} P^n_{ij} \pi_i', \forall n$
+
+  $= \displaystyle\lim_{n\rarr\infin} \pi_j'$
+
+  $= \displaystyle\sum^{M-1}_{i=0} \displaystyle\lim_{n\rarr\infin} P^n_{ij}\pi_i'$
+
+  $= \displaystyle\sum^{M-1}_{i=0} \pi_j \pi_i'$ 
+
+  $= \pi_j \displaystyle\sum^{M-1}_{i=0} \pi_i'$
+
+  $ =\pi_j$
+
+## Lecture 7 | Further State Distributions - 2020-09-23
+
+### Infinite State Discrete Time Markov Chains
+
+- Same results hold relating **limiting distributions** and **stationary distributions** 
+  - Proofs are much trickier: deal with interchanging limits and infinite sums 
+  - **key issue:** must solve an *infinite* number of linear equations in an *infinite* number of unknowns
+
+##### Example
+
+Consider a system that operates as follows:
+
+- At each time point, with *probability* 0.05, a job arrives, otherwise *no jobs arrive*
+
+- At each time point, with probability 0.1, a job departs (*if at least one job is present*), otherwise no jobs depart
+
+- Both an arrival and a departure can happen
+
+- If one or more jobs in system, probability of an increase by one is $r = (0.05)(1 - 0.1) = 0.045$
+
+- Probability of a decrease by one is $s = (0.1)(1 - 0.05) = 0.095$
+
+- Probability of no change is $1 - r - s = 0.86$
+
+  
+
+  Assume that *if zero in the system*, probability of an **increase by one is *r***, *otherwise* *stays at zero*
+
+###### Transition Matrix
+
+![image-20200928174640197](images/lecture/image-20200928174640197.png)
+
+Solve the following system of equations
+
+![image-20200928204930559](images/lecture/image-20200928204930559.png)
+
+- First equation gives $\pi_1 = (r/s)\pi_0$
+- Second equation rearranged combined with first equation gives $\pi_2 = (r/s)^2\pi_0$
+- Third equation rearranged combined with second equation gives $\pi_3 = (r/s)^3\pi_0$
+- ==$\pi_n = (\dfrac{r}{s})^n \pi_0$== --- *in general, for finding the value of the nth state*
+
+![image-20200928205246087](images/lecture/image-20200928205246087.png)
+
+![image-20200928205255039](images/lecture/image-20200928205255039.png)
+
+![image-20200928205307653](images/lecture/image-20200928205307653.png)
+
+
+
+#### Example: Search Engine Goals
+
+- Match search terms, but also rank pages
+- Wish to rank pages based on popularity (assume matching is done)
+
+##### Proposal 1
+
+- Popularity of a page is determined by the number of backlinks to it
+  - Not all links are equal - a link from a "popular" page should count more
+- To get high rank, just create many pages pointing to the web page
+
+##### Proposal 2
+
+- Look at # of pages linked to backlinked pages
+  - Fool it: just have all pages point to each other
+
+##### Proposal 3
+
+- Formalize idea - "a page has *high* **rank** if the *sum* of the **ranks** of its **backlinks** is *high*"
+- Let $\pi_j$ be the **rank** of a **page**, then $\pi_j = \displaystyle\sum^n_{i=1}\pi_iP_{ij}$
+
+### PageRank (Vanilla):
+
+1. Determine all **pages** and all **links** *between* **pages**
+
+2. Create a **DTMC** where the **states** *are* the **pages**, and there is a *transition* from **page i** to **page j**, if and only if, there is a **link** *between* **i** and **j**
+
+3. If **page i** has $k_i > 0$ **links**, then the **probabilities** of the corresponding *transitions* from **i** to **j** are $\dfrac{1}{k_i}$
+
+4. Solve the **DTMC**. Higher **limiting probability** means higher **rank**
+
+   **i.e.** ==limiting probability $\propto$ rank==
+
+## Lecture 8 | Caching and Operation Analysis - 2020-09-24
+
+### Caching Example
+
+- Compare strategies for **caching** virtual memory paging in OS
+
+  - model the system as *ranked* sets of **pages*
+
+  - Suppose that we have **eight** pages, currently ranked:
+
+    $P_3,P_7,P_2,P_6,P_5,P_1,P_8,P_4$
+
+    Assume next request is for $P_5$, what is the new ranking?
+
+    - **LRU**: $P_5,P_3,P_7,P_2,P_6,P_1,P_8,P_4$
+
+      *same but now $P_5$ is on top*
+
+    - **Move-Ahead**: $P_3,P_7,P_2,P_5,P_6,P_1,P_8,P_4$
+
+      *$P_5$ moves up one rank, ahead of $P_6$*
+
+#### System State
+
+- If $N$ is the number of **pages**, state is permutation of $\{1, ..., N\}$
+  - State Space  = $N!$
+  - Linux system: **page** size is 4kB, memory size 1GB, swap disk 1GB, so state space has size 500000!
+
+#### Request Model
+
+- Requests are *random*
+
+- Requests follow an **i.i.d** (*independent* and *identically distributed*) sequences of values
+
+  $P\{R_n = P_i\} = p_i$
+
+- Suppose we want to consider performance when there is a "*more frequent page*", $P_A$
+
+  **assume:**
+
+  ​	$a = P\{R_n = P_A\}$
+
+  ​	$b = P\{R_n = P_i\}, P_i \neq P_A$
+
+  ​	$a > b$
+
+  ​	$a + (N - 1)b = 1$
+
+- Note that this allows that $a$ is *much* smaller than $(N-1 )b$
+
+- Can we *reduce* the **state** **space**?
+
+#### State Space Reduction
+
+- **\{$X_N$\}** is the **position** of **page** $P_A$ after the *nth* **request**
+  - **state space** is size $N$
+  - *assume N = 8*
+
+##### LRU: Transition Matrix
+
+![image-20200928212101828](images/lecture/image-20200928212101828.png)
+
+##### LRU: Stationary Distribution
+
+With $a = $ 0. 3$, $ $b = 0.1$
+
+![image-20200928212142687](images/lecture/image-20200928212142687.png)
+
+##### Move-Ahead: Transition Matrix
+
+![image-20200928212159711](images/lecture/image-20200928212159711.png)
+
+##### Move-Ahead: Stationary Distribution
+
+![image-20200928212221182](images/lecture/image-20200928212221182.png)
+
+##### Conditional Cache Miss Probabilities (*for page A*)
+
+![image-20200928212232393](images/lecture/image-20200928212232393.png)
+
+### Operational Analysis
+
+#### Description of a Queueing System
+
+- **Queue** : consists of a buffer where arriving jobs wait to be served by a server, and depart after processing
+  - Must describe:
+    1. **Arrivals** - time between arrivals is given by a **probability distribution**
+    2. **Queue** - size (*infinite* or *finite*)
+    3. **Server Operations**  - number of servers, oder of service (FIFO,LIFO), processing times (the probability distribution that determines them)
+
+#### Performance Metrics
+
+1. **Response Time**: time from arrival to departure
+2. **Throughput**: number of jobs server *per unit time*
+
+#### Queueing Networks
+
+We may be interested in complicated systems, where **queues** are *connected together*
+
+##### Analysis Directions
+
+We are faced with two possibilities when doing analysis:
+
+1. **Exact Analysis** - try to determine equations that yield the desired performance metric
+2. **Simulation** - by generating samples from the underlying distributions, we can follow the logic of the system to estimate the performance measures of interest
+   - ex. generate a large number of "real" response times, compute average
+
+#### Operation Laws
+
+- **$A_i(t)$** - number of **arrivals** to *device i* at *time t*
+- $C_i(t)$ - number of **completions** (departures) from *device i* at *time t*
+- $B_i(t)$ - **busy time** of *device i* at *time t*
+
+##### Derived Quantities
+
+- **Arrival rate** at device i:				 						$\lambda_i(t) = \dfrac{A_i(t)}{t}$
+- **Throughput** at device i:                                        $\Chi_i(t) = \dfrac{C_i(t)}{t}$
+- **Utilization** at device i:                                           $\rho_i(t) = \dfrac{B_i}{t}$
+- **Average Processing Time** at device i:              $S_i(t) = \dfrac{B_i(t)}{C_i{t}}$
+
+##### Ergocidity Assumptions
+
+- Assume that the system is ***ergodic***
+
+  - *time averages lead to actual underlying means*
+
+    $\lambda_i(t) \longrightarrow \lambda_i$
+
+    $\Chi_i(t) \longrightarrow \Chi_i$
+
+    $\rho_i(t) \longrightarrow \rho_i$
+
+    $S_i(t) \longrightarrow E[S_i] = \dfrac{1}{\mu_i}$
+
+##### Utilization Law
+
+$\dfrac{B_i}{t} = \dfrac{C_i(t)} {t} \dfrac{B_i(t)}{C_i(t)}$
+
+$\rho_i(t) = \Chi_i(t)S_i(t)$
+
+==$\rho_i = X_iE[S_i]$==
+
+##### Forced Flow Law
+
+Suppose that $A_i(t) = C_i(t)$.
+
+- Let $E[V_i]$ be the expected number of visits to device i *per job*. 
+
+  - Let $V_i$ number of visits to device i
+
+  - This requires a reference device, which we will call device 0. 
+
+  - By definition: $E[V_0] = 1$
+
+    ![image-20200928215235741](images/lecture/image-20200928215235741.png)
+
+- **Define:** system throughput $\Chi$ measured through **node 0**, throughput of node i is:
+
+  $\Chi_i(t) = \dfrac{C_i(t)}{t} =  \dfrac{C_i(t)} {C_0(t)} \dfrac{C_0(t)}{t}$
+
+  Taking limits as $t \rarr \infin$: ==$X_i = E[V_i]X$==
+
+##### Device Demands
+
+- **Utilization Law:** $\rho_i = X_i E[S_i]$
+- **Forced Flow Law**: $X_i = E[V_i]X$
+
+Combining these two:
+
+​	$\rho_i = E[S_i]E[V_i]X$
+
+and by defining the **average demand at device i** as : $E[D_i] = E[S_i]E[V_i]$
+
+==$\therefore \rho_i = E[D_i]X$==
+
+- **$E[D_i]$** = **expected processing time** on *device i* totalled over ***all*** visits of a **job**
+  - *bottleneck* is the device with the highest $E[D_i]$
+
+##### Little's Law
+
+==$E[N_i] = \lambda_i E[T_i]$==
+
+- $E_[N_i]$ -  number of **jobs** in a **queueing system**
+- $\lambda_i$ - **arrival rate** to the **queueing system**
+- $E[T_i]$ - **mean response time**
+
+States that the **number of jobs queued** for device i is equal to the **arrival rate** at device i times the **mean response time**
+
+###### Derivation
+
+- $N(t) = A(t) - C(t)$
+  - number of jobs in a system at time t, N(t) 
+  - Defined as **arrivals** minus **completions**
+- $\lambda(t) = \dfrac{A(t)}{t}$
+  - **arrival rate** at time t is the **number of arrivals** at time t, divided by time t
+- $T(t) = \displaystyle\int^t_0 \dfrac{ (A(u) - C(u))du}{A(t)}$
+  - **Average response time** 
+- ![image-20200928221329237](images/lecture/image-20200928221329237.png)
 
