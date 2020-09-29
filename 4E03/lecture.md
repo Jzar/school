@@ -764,7 +764,7 @@ States that the **number of jobs queued** for device i is equal to the **arrival
 ###### Derivation
 
 - $N(t) = A(t) - C(t)$
-  - number of jobs in a system at time t, N(t) 
+  - **number of jobs in a system at time t**, N(t) 
   - Defined as **arrivals** minus **completions**
 - $\lambda(t) = \dfrac{A(t)}{t}$
   - **arrival rate** at time t is the **number of arrivals** at time t, divided by time t

@@ -971,3 +971,166 @@ Begs the question: ***how*** and ***why***?
 
   
 
+## Lecture 9 | Theories - 2020-09-29
+
+### Theories
+
+- **==Theories==** = **high-level**, widely applicable frameworks to draw on during **design** and **evaluation** as well as to support **communication** and **teaching**
+  - can be *predictive*
+  - more *abstract* than **principles** and **guidelines** and require *the most* interpretation
+
+### Fitts' Law
+
+- ==**Fitts' Law**== = Predicts that the time for a user to point to a target area is a ***function of the width of the target*** and ***the distance to the target***
+  - Scientific Law discovered by *Paul Fitts* through experimentation in 1954
+  - Targets that are **bigger** and **closer** to where the user is currently pointing will be *faster* for a user to interact with
+  - Targets that are **smaller** and **further** will be *slower* for a user to interact with
+- One of the most **objective** and **concrete** concepts in design
+  - Tested over decades
+  - Reproduced many time
+  - Holds for "pointing device", whether its controlled with finger, mouse, joystick, eyes, tongue, etc.
+
+##### Example
+
+Which button will the user reach first with their cursor in this position? Why?
+
+![image-20200929113553532](images/lecture/image-20200929113553532.png)
+
+#### Formalisation
+
+​	==$ID = log_2(\dfrac{2D}{W})$==
+
+​	$ID - $ index of difficulty
+
+​	$D - $ distance from the starting point to the target centre
+
+​	$W - $ width of the target 
+
+##### Computing Mean Pointing Time
+
+**Variables:**
+
+- $MT - $ mean time
+
+- $a,b - $ constants dependent on input device
+
+- $ID - $index of difficulty
+
+- $D -$ distance from the starting point to target centre
+
+- $W -$ width of the target
+
+$MT = a + b * ID = a + b * log_2(\dfrac{2D}{W})  $
+
+#### In Practice
+
+- Designers generally aren't computing values with these equations
+  - Instead, the core idea behind Fitt's law is used to inform design decisions
+  - Ex. OS X Common Menu Bar
+- Group buttons that are likely to be used together
+  - Think: rewind, play, pause, fast forward
+  - Sometimes play even turns into pause and vice versa
+- Have an option that's ***bad*** or ***dangerous*** for the user?
+  - Keep it *far away* from the main group of buttons
+- Corners of the screen will always be fast to reach
+  - Start button, OS X apple icon
+- Position near the corners of the screen, but not the corners, will take the longest to reach
+  - ***least valuable screen space***
+
+### Norman's 7 Stages of Actions
+
+- Users undergo these stages while interacting with an interface
+  - ***cyclical pattern***
+
+1. ***Forming* the Goal**
+2. **Forming the Intention**
+3. **Specifying the Action**
+4. **Executing the Action**
+5. **Perceiving the System State**
+6. **Interpreting the System State**
+7. **Evaluating the Outcome**
+
+#### Norman's Definitions
+
+- **mapping** = relationship between the elements of two sets of things
+  - mapping between light switches and lights
+- **conceptual model** = an explanation, usually highly simplified, of how something works
+  - eg. folder and file icons
+- **feedback** = communication about the results of an action
+  - when you hit a button and button lights up / vibrates
+- **system image** = is the combined information available to the user
+  - ***complete picture***
+  - What the interface looks like
+  - How similar interfaces work
+  - Instruction manual
+  - Sales and marketing videos and images
+
+##### Examples
+
+Excellent conceptual model usage
+
+![Excellent conceptual model usage](images/lecture/image-20200929115915483.png)
+
+vs. how it was handled during the pandemic: conceptual model broke down!
+
+![image-20200929120037430](images/lecture/image-20200929120037430.png)
+
+#### Four Principles of Good Design
+
+Principles suggested by Norman based on **7 Stages of Action**
+
+1. The **state** and the **action** alternatives should be *visible*
+2. There should be a *good* **conceptual model** with a *consistent* **system image**
+3. The **interface** should include *good* **mappings** that reveal the relationships between stages
+4. **Users** should receive *continuous* **feedback**
+
+#### Gulf of Evaluation
+
+- **==Gulf of Evaluation==** - degree to which the interface provides representation that can be directly perceived and interpreted in terms of the expectations and intentions of the user
+  - ie. the **gulf of evaluation** is the *difficulty* of assessing the **state of the system** and *how well* the interface supports the discovery and interpretation *of* that **state**
+- "The gulf is small when the system provides information about its state in a form that is easy to get, is easy to interpret, and matches the way the person thinks of the system"
+
+#### Examples
+
+- What if your OS ***did nothing at all*** when transferring files between folders?
+
+  - Poor gulf of evaluation, you won't know what to expect
+
+- What if instead your operating system showed a spinner or hourglass
+
+  - You would at least know ***something*** is happening, ***some*** system state is reflected, but you wouldn't know ***what*** is happening
+
+  
+
+### Gulf of Execution
+
+- ==**Gulf of Execution**== - degree to which the **interaction possibilities** of an interface *correspond* to the **intentions *of the person*** and *what* the person perceives is **possible** to do with the interface
+  - ie. the difference between the **intentions of the user** and ***what the system allows them to do*** OR *how well* the **system** *supports* those actions
+  - Not clear to the user on how to do what they want to do 
+
+### Affordances
+
+- **==Affordances==** - are the action possibilities that are readily perceivable by an actor 
+  - (Norman, 1988)
+  - Eg. handle on a kettle makes it readily perceivable to the user that they can hold the kettle by the handle
+- ==**Affordances**== - are a relationship between the properties of an object and the capabilities of the agent that determine just how the object could possibly be used
+  - (Norman, 2013)
+  - ie, given the object properties and capabilities of the actor (user), what does the object allow for?
+    - An actor can sit on a small wooden chair
+      - Object property: space for user to sit, provides support
+      - Actor capability: small enough to fit on chair without breaking
+  - Users have capabilities, Objects have properties, relationships between them are affordances
+
+### Signifiers
+
+- **==Signifier==** - communicate where the **action** should take place 
+
+  - (Norman, 2013)
+  - refers to any mark or sound, or any perceivable indicator, that communicates appropriate behaviour to a person
+  - **affordances** determine *what* **actions** are possible, **signifiers** indicate *where* they take place
+
+  Allow us to communicate to a user through design how something is used without explaining it to them directly
+
+![image-20200929121812616](images/lecture/image-20200929121812616.png)
+
+*clues in the interface to signify what can be done*
