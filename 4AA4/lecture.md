@@ -10,7 +10,7 @@
 
 - Introduction to Real-time systems
 - Real-time Scheduling Algorithms
-- Introudction to Digital Control Systems
+- Introduction to Digital Control Systems
 
 #### Labs
 
@@ -620,7 +620,7 @@ ret = setpriority(which, pid, priority);
 
 ![image-20200924225945301](images/lecture/image-20200924225945301.png)
 
-## Lecture 7 | Concepts of Real Time Scheduling- Polling v. Interrupt 
+## Lecture 8 | Concepts of Real Time Scheduling- Polling v. Interrupt 
 
 ## Real-Time Tasks
 
@@ -633,7 +633,7 @@ ret = setpriority(which, pid, priority);
 - **Sporadic Task** = inter-arrival time between consecutive instances differ widely (*hard timing constraints*)
 - **Aperiodic Tasks** = inter-arrival time between consecutive instances differ widely (*soft deadlines*)
 
-#### Preemtivity of Tasks
+#### Pre-emtivity of Tasks
 
 - A **task** is ***pre-emptable*** if its execution can be suspended *any time* to allow execution of other **jobs**
 
@@ -856,7 +856,7 @@ int clock_nanosleep(clockid_t clockid, intflags, const struct timespec *request,
 
 Suspends the execution of calling thread until the time value of the clock specified by **clock_id** reaches the absolute time specified by the time argument, or the process is terminated.
 
-## Lecture 8 |  Quiz - 2020-09-28
+## Lecture 9 |  Quiz - 2020-09-28
 
 ![image-20200928125154556](images/lecture/image-20200928125154556.png)
 
@@ -885,3 +885,181 @@ answer: B
 ![image-20200928130244329](images/lecture/image-20200928130244329.png)
 
 answer: c
+
+## Lecture 10 | Scheduling Algorithms - 2020-09-29
+
+### Cyclic Executives (CE)
+
+#### Review: Real-time Task Representations
+
+- **Periodic Task**  ($T_i$) = 4 tuple $(\phi_i, P_i, e_i,D_i)$                  ($\phi_i,P_i,e_i,D_i$)
+
+  ​									 = 3 tuple ($P_i,e_i,D_i$) 		= 4 tuple $(0,P_i,e_i, P_i)$
+
+  ​									 = 2 tuple ($P_i,e_i$)        		= 4 tuple $(0,P_i,e_i,P_i)$
+
+  ==$\phi_i$==  – ***phase*** of **task** $T_i$
+
+  ==$P_i$==  – ***period*** of **task** $T_i$
+
+  ==$e_i$==   – ***execution*** ***time*** of **task** $T_i$
+
+  ==$D_i$==  – ***relative*** ***deadline*** of  **task** $T_i$
+
+#### Definition: Cyclic Executive
+
+- **Cyclic Executive** - *table-driven* scheduling algorithm that gives **offline static-schedules** which specifies ***when*** each **job** executes
+  - **Assumptions:**
+    - Parameters of **jobs** with **hard deadlines** are *known*
+    - Task scheduling is **non-preemptive**
+  - **non-periodic** work can be run during time slots *not* used by **periodic tasks**
+  - Sophisticated algorithms can be used
+
+##### Ex: Consider 4 Periodic Tasks
+
+​	$T_1 =(4;1),\\T_2 =(5;1.8),\\T_3 = (20;1),\\T_4=(20;2)$
+
+![image-20201006135234954](images/lecture/image-20201006135234954.png)
+
+##### Hyper-period
+
+- **Hyper-period** = the least common multiple (**LCM**) of the **periods** *of all* the **periodic** $T_i$
+
+  - $N$ - **max number** of arriving **jobs** in a **hyper-period** 
+
+    $N = \displaystyle\sum^n_{i=i} \dfrac{H}{p_i} $
+
+  - $p_i$ - **period** of $T_i$
+
+- In above example, hyper-period $H = 20$  for the four tasks, and $N = 11$
+
+  $T_1 =(4;1),\\T_2 =(5;1.8),\\T_3 = (20;1),\\T_4=(20;2)$
+
+  $20 = 4 * 5 \therefore 4 T_1 , 5T_2$ ; $N = \frac{20}{4} + \frac{20}{5} + 2 * \frac{20}{20} = 11$
+
+#### Frames
+
+**Problem**: We wish that **scheduling decisions** made at *regular* intervals rather than at *arbitrary* times
+
+**Solution**: 
+
+- **Frame** = a division of a **hyper-period**
+
+  - **timing** is **enforced** *only* at **frame boundaries**
+
+  - Each **task** *must* fit within a *single* **frame**
+
+    $f = $ **frame** size (in units of time)
+
+    $F = \dfrac{H}{f}$ - number of **frames** *per hyper-period* is hyper-period / frame size
+
+##### Frame Size Constraints
+
+1. A **job/instance** *must* fit into a **frame**
+
+   $f \geq \displaystyle\max_{1 \leq i\leq n} e_i, \forall T_i$
+
+   - **Justification**: non-preemptive tasks should finish executing within a single frame
+
+2. $H$ *must* be evenly divided by $f$
+
+   - **i.e.** the **hyper-period** $H$ has an integer number of frames
+   - **Justification**: keep the **cyclic schedule** table size small
+
+3.  $f$ should be sufficiently small, so that there should be a *complete* **frame** *between* the **release** and **deadline** of every **task**
+
+   - Justification: Schedule the **task** *before* **deadline** missing
+
+   - ![image-20201006140837562](images/lecture/image-20201006140837562.png)
+
+     $\therefore 2f - \text{gcd}(P_i,f) \leq D_i, \forall \text T_i$
+
+#### Example Revisited
+
+![image-20201006141131679](images/lecture/image-20201006141131679.png)
+
+#### Task Slices
+
+- What if **frame size constraints** *cannot* be met?
+  - example: $T = \{(4,1),(5,2,7),(20,5)\}$
+  - By $C_1: f \geq 5$
+  - By $C_3: f \leq 4$
+
+## Lecture 11 RM Schedulability | 2020-10-20
+
+### Review:
+
+- A set of real-time tasks
+- A scheduling algorithm
+
+Is the task set schedulable:
+
+- Yes -> all deadlines met, forever
+- No -> at some point a deadline might be missed
+
+Ways to Schedule:
+
+- Cyclic executive 
+- static priorities
+- Dynamic priorities
+  - Priorities is computed at run-time
+  - More flexible, but less predictable
+
+### Static Priority Assignment 
+
+- A higher priority task is executed first than a lower priority task
+- Priority based on **Criticality**?
+  - if we consider **hard real time** applications, they are of the *same* level of importance
+- Shorter period tasks get higher priority 
+  - **Rate Monotonic (RM)**
+- Tasks with shorter relative deadlines get higher priority
+  - **Deadline Monotonic (DM)**
+- Both RM and DM 
+  - good theoretical propertieis
+  - work well in practice
+
+#### Rate Monotonic Scheduling Algorithm
+
+- **RM ** = static priority preemptive approach, where shorter period tasks get higher priority
+  - RM scheduler executes the instance of the ready task that ***has the highest priority***
+  - $\text{Priority}(T_i) \propto \dfrac{1}{P_i}$ : the smaller the period, the greater the priority!
+    - If two or more tasks have the same period, the scheduler selects one of these jobs at *random*
+
+##### Example
+
+![image-20201020110737621](images/lecture/image-20201020110737621.png)
+
+![image-20201020110756132](images/lecture/image-20201020110756132.png)
+
+### Schedulability Test
+
+- Test is the test of tasks satisfy conditions of RM
+
+#### Test 1
+
+For *n* **periodic processes**, independent and pre-emptive
+
+​		$D_i \geq p_i$
+
+- **Periods** of all processes are integer multiples of each other
+- **CPU Utilization** on a uniprocessor using RM needs to be below 1:
+
+![image-20201020111258668](images/lecture/image-20201020111258668.png)
+
+#### Test 2
+
+If the tasks have ***arbitrary periods***, a *sufficient* but no necessary condition is:
+
+​		$U \leq n(2^{\dfrac{1}{n}} -1)$
+
+#### Test 3
+
+**Time Demand Function** for $T_i$ , for $i \in (1 \leq i \leq n)$
+
+​	$\omega_i(t) = \displaystyle\sum^i_{k=1}t[\dfrac{e_k}{p_e}] \leq t$
+
+holds for ***any time instant t*** chosen as follows:
+
+$t = k_jp_j$ 	$j \in (1,i)$, $k_j = (1,|\dfrac{p_i}{p_j}|)$
+
+$i$ is current, $j$ is past

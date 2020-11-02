@@ -62,13 +62,13 @@ $S$ and $\empty$ are events, and $S' = \empty$ , given sample space $S$
   
 - Not all objects may be unique, ex. "**BANANA**"
   
-- If all the letters were unique, there would be $6!$ perumtations, but since there are 3 As, and 2 Ns, some of the permutations leave the word unchanged
-  
-- There are 3! ways to permute the A's and 2! ways to permute the Ns. If we "cancel" the permuations that do nothing, we have $\frac{6!}{3!2!}$ = 60 many unique permutations
-  
-- Given $n = n_1 + n_2 + ... + n_r$ many objects with $n_i$ identical many objects of type i, there are
-  
-  $\dfrac{n!}{n_1!n_2!...n_r!}$
+  - If all the letters were unique, there would be $6!$ perumtations, but since there are 3 As, and 2 Ns, some of the permutations leave the word unchanged
+    
+  - There are 3! ways to permute the A's and 2! ways to permute the Ns. If we "cancel" the permuations that do nothing, we have $\frac{6!}{3!2!}$ = 60 many unique permutations
+    
+  - Given $n = n_1 + n_2 + ... + n_r$ many objects with $n_i$ identical many objects of type i, there are
+    
+    $\dfrac{n!}{n_1!n_2!...n_r!}$
   
   ​    
 
