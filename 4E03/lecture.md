@@ -1222,7 +1222,8 @@ $P\{queueing\} = \displaystyle\sum^\infin_{n=c} \pi_n = \dfrac{1}{c!}(\dfrac{\la
 
 ​	![image-20201029192554063](images/lecture/image-20201029192554063.png)
 
-### Lecture 17 - 2020-10-22
+### Lecture 17 | Multi-server Systems - 2020-10-22
 
-### Multiserver Systems
+### *k* M/M/1 versus M/M/1
 
+- M/M/1 system and one of the k slow M/M/1 

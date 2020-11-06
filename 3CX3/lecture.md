@@ -50,3 +50,17 @@ Group ideas into themes
 
 
 Online and asynchronous education has shifted a lot of the assessments to take home assignments to account for the inability to proctor / administer tests or labs or in class work. Because of this, and as well as due to the many challenges online school has brought to running clubs, it has become more overwhelming to keep up with deadlines. Due to the async nature, it always feels as if I could be doing something, and its hard to have down time without feeling guilty. There's always the anxiety that there is a deadline that might be missed.
+
+
+
+## Workshop - Sponsorship & Marketing
+
+Building a personal brand 
+
+![image-20201102192216165](images/lecture/image-20201102192216165.png)
+
+Program | Position | Passion T
+
+
+
+Follow companies you want to collaborate with

@@ -2193,3 +2193,185 @@ navigator.geolocation.getCurrentPosition(
   - Does it have a gender?
     - Users apply gender stereotypes to VUIs
     - ***Designers*** also apply gender stereotypes when creating VUIs
+
+## Lecture 19 | User Experience Design - 2020-11-05
+
+
+
+## Lecture 20 | Gamification - 2020-11-06
+
+### Gamification
+
+- **Gamification** = the use of game design elements in non-game contexts
+  - using a game for purposes *besides* entertainment is strictly speaking ***not*** gamification
+  - a **serious game** is a game that is designed primarily for a purpose other than entertainment
+  - Modern definition by **Sebastian Deterding** [*From Game Design Elements to Gamefullness: Defining "Gamification"*](https://d1wqtxts1xzle7.cloudfront.net/30609294/MindTrek_Gamification_PrinterReady_110806_SDE_accepted_LEN_changes_1.pdf?1361181229=&response-content-disposition=inline%3B+filename%3DFrom_game_design_elements_to_gamefulness.pdf&Expires=1604614814&Signature=Z7yM~-~Ppf2I3Zu4ExFdGCqfgYa6~qd2GPXlCeQ9a3mlYo-gQdaqbjPFjjkNPTqZt2gIKNU0l41Z8Ol4~iTnXUDdUA1UJZzR2Rp8BdB7iqYBa7usTBDA-TOXRcOM9xEMI0TIEJhqz7t6-lFe54Bbd4jAru9LFKaeVQJ8Ie-Z3cO9JyXKrWec5IzNcozfU8ZqmmFKI0WVLJllXvJ33nZW4-7pv~AKYw-NOioKtBsOE0cRbV2S3PFL5zGh8vL2zgn2WJwqZK8~8V7DYAGUJOSSItXFaaPHmh58DK-xkj1eq6wDx5nSFv2jv5Zsak4A1oST8rg-O99cKq0eyizFWyfUvw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA)
+- Goes beyond software applications
+  - **Reward** points for credit cards
+  - Leaderboards for classroom participation
+
+#### Why use gamification?
+
+- **Gamification** can be used to improve:
+  - Motivation
+  - Engagement
+  - Productivity
+  - Learning
+  - Knowledge retention
+  - Usability
+- Many of these are attitudes, habits, and feelings more associated with **UX** **goals** than **UI goals**
+- Key value of gamification is ability to ***modify behaviour***
+
+#### Successful Examples
+
+- **Starbucks Rewards app**: credited for $2.65 billion in sales
+- **Duolingo**
+
+#### How can we use gamification?
+
+- We need to become aware of the possible game design elements we could integrate
+- We need to understand how game design elements can influence user behaviour
+  - Longer lasting way
+- Can't treat it like magic
+  - Early 2010s treated gamification like modern startups treat ML
+
+### Game Design Elements
+
+- **Game Design Elements** = elements that are typically found in games 
+  - e.g. a score
+  - We interpret this boradly to include elements that are not only found in games (time limits)
+  - need to be used *thoughtfull* to **motivate behaviour**
+    - leverage research into their effectiveness
+    - we can use **game design elements** *in conjuction* with one another
+
+- Gamification vs. Game
+
+  - **Classic game** :
+
+    > A **game** is a rule-based formal system with a variable and quantifiable outcome, where different outcomes are assigned different values, the player exerts effort in order to influence the outcome, the player feels attached to the outcome, and the consequences of the activity are optional and negotiable" - Jesper Jule
+
+  - Gamification usually lacks win/lose states
+
+#### Badges
+
+- **Badges** = visual represenations of achievements by the player
+  - eg. *completing X number of activities*
+  - Form of **feedback** and **reward** that provides motiviation
+  - If badges are visible to other players, they can provide motivation for the other players
+- Can make up part of a *layered reward system*
+  - Improved badges for higher achievements
+  - Green checkmark for getting one answer right, but a *gold* checkmark for getting 5 out of 5
+
+#### Points
+
+- **Points** = numerical representation of the user's progress
+  - We might call points a **score**
+  - We might visually represent points with **performance graphs** 
+    - meters, progress bars, etc.
+  - Can be real world (Calories) or fictional world (stars, gems, etc)
+- **Points** are ***feedback*** that allow users to measure their progress
+  - **motivates behaviour** towards goal achievement
+- **Rewards** or **badges** may be offered to recognize specific levels of points achieved
+
+#### Leaderboards
+
+- **Leaderboards** = ranking of individuals relative to one another according to some criteria, usually some points
+  - **Motivates** users to perform through competition
+  - Social pressure increases the player's engagement
+  - We might provide badges for leaders
+- Can actually be ***demotivational*** for individuals who are very far behind
+- Leaderboards work most effectively when participants are similar in ability or skill level
+
+#### Time Limits
+
+- **Time limits** = particular point in time in which something must be accomplished
+  - Can motivate a user to focus on the task at hand; forces users to be in the moment
+  - Can be *demotivational* for users that perform slower
+    - Will experience frustration at failure to make accomplishment
+  - Users can't space out / disengage
+
+#### Teams
+
+- **Teams** = groups of users in competition against other groups or otherwise competing together
+  - can foster motivation through competition, but *also through **co-operation***
+    - **Co-operation** = prosocial behaviour that promotes other pro-social behaviours such as sharing and helping
+    - Individuals on teams are incentivized to help other team members perform better
+- Competion may not be ideal, shy, or introvered individuals may perfer solitary participation
+
+#### Avatars
+
+- **Avatars** = visual representation of the user
+  - User can often create and customize their avatar
+  - Allows users to create an identity within the application
+    - Gives user control over their identity
+  - Avatars allow users to participate in a **community**
+    - Interact with one another in ways relevant to the identities that have been created
+
+#### Meanginful Stories
+
+- **Meaningful Stories** = are narratives that are *meaningful* to the user
+
+  - Can provide powerful motivation *beyond* **badges** or **points**
+
+    - Provide a sense of progress to the user, without requiring points
+    - Motivational in a different kind of way; user desire to see the end of the story
+
+  - Stories do not need to have linear narratives -- **choice** might be acommodated
+
+    - i.e. mutliple alternative endings and "side quests" might be accomodated in this way
+    - Non-linear narratives can be described in a graph of end states for the user
+
+    ![image-20201106120126173](images/lecture/image-20201106120126173.png)
+
+#### Dynamic Difficulty Adjustment
+
+- **Dynamic Difficulty Adjustment (DDA)** = method of automatically modifying a game's features, behaviours, and scenarios in real-time depending on the player's skill - [Mohammad Zohaib](https://www.hindawi.com/journals/ahci/2018/5681652/)
+  - Prevents players from being bored by a game that is too easy, or frustrated from a game that is too difficult
+  - Use Dynamic Difficulty Adjustment as part of gamification
+    - e.g. Increasing time limits for players that are struggling
+  - If not transparent, users may discover the feature, and use it as a reward or point or a level system
+
+### Designing with Gamification
+
+- Designing application with **gamification** must be done carefully and thoughtfully
+  - Unwise gamification can have the ***opposite*** effect on motivation, engagement
+- **Design for your audience**:
+  - Choose appropriate **game design elements**
+  - Make **gamification** *meaningful* to the audience
+  - Design for intrinsic motivation as much as extrinsic
+
+### Using Game Design Elements
+
+- We can use **game design elements** to ***motivate*** based on specific **psychological needs**
+  - Allows us to choose DGEs depending on what is relevant for a specific audience
+- Research into the effects of specific GDEs is still ongoing
+  - [*How gamification motivates: An experimental study of the effects of specifc game design elements on psychological need satisfaction*](https://www.sciencedirect.com/science/article/pii/S074756321630855X)
+
+### How Gamification Motivates
+
+- Human's are social animals, and often have the need to demonstrate mastery
+
+![image-20201106120938238](images/lecture/image-20201106120938238.png)
+
+### Extrinsic vs. Instrinsic Motivation
+
+- **Extrinsic Motivation** = when you engage in behaviour for external rewards
+  - eg. grades, money, badges
+- **Instrinsic motivation** = is when you engage in behaviour because you find it rewarding for its own sake
+  - eg. reading a book you find interesting
+- Studies have shown offering too many external awards can actually ***decrease*** intrinsic motivation
+  - But external rewards can also be effective at interesting users in an activity that they were not previously interested in
+
+### Meaningful Gamification
+
+- **Meaningful Gamification** = aims to help users find meaningful connections with the underlying non-game activities and using rewards only when truly necessary
+  - Developed by Scott Nicholson, Wilfred Laurier Brantford
+    - "The problem with gamification, is when the rewards stop, so does the behaviour"
+
+#### How to Achieve Meaningful Gamification
+
+- Allow for choice, free form play
+- Make rewards, narrative, and goals relevant to instrinsic player goals and interests
+- Let users decide their own goals and rewards
+  - in a fitness application, users could decide their weight loss goals and associated rewards
+
