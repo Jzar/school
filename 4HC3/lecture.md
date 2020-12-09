@@ -1,5 +1,7 @@
 # 4HC3 | Human Computer Interactions
 
+
+
 ## Lecture 1 : Meta Lecture / Syllabus - 2020-09-10
 
 **Instructor**: Kevin Browne `brownek@mcmaster.ca`
@@ -7,8 +9,6 @@
 - PhD in HCI
 - Master done @ IBM
 - Software Hamilton, Hamilton Code Clubs, The Forge
-
-
 
 ==**Human Computer Interfaces**== = space where interations between humans and computers occurs
 
@@ -1251,7 +1251,7 @@ See recording:
 - **Universal Usability Testing** = focused on testing  with diverse users, hardware, software, networks
 - **Can-you-break-this Testing** = when users are challenged to find fatal flaws in the interface
   - Used frequently with video games
-- **Lab Testing** = done in a **usability lab** with equiptment such as two-way mirrors and recording devices
+- **Lab Testing** = done in a **usability lab** with equipmentu' such as two-way mirrors and recording devices
   - High-fidelity observations, potentially less realism
   - Sometimes lab resemble a living room or office to add realism to the setting
 - **Guerilla Testing** = done in a public place with randomly chosen participants
@@ -2196,7 +2196,146 @@ navigator.geolocation.getCurrentPosition(
 
 ## Lecture 19 | User Experience Design - 2020-11-05
 
+### User Experience
 
+- **User Experience (UX)** = encompasses all aspects of the end-user's interactions with the company, its services, and its products [src](https://www.nngroup.com/articles/definition-user-experience/)
+
+  - **UX** is *broader* than **usability** and **HCI**. It can include aspects like *sales and marketing*
+
+    - can be applied to anything that is experienced
+
+  - **UX** is focused on the user's attitudes and emotions regarding products and services
+
+    > **Ux is focused on the user's journey to solve a problem**; UI is focused on how a product's surfaces look and function - Ken Norton, Partner at Google Ventures
+
+- There is much disagreement about what is **UX** and the boundaries between **UX** and **UI** design
+
+  - Designers have an incentive to market themeselves as offering differentiated and improved services - leads to a bit of a service naming arms race
+  - [***What is UX design? 15 expert user experience experts weigh in***](https://www.usertesting.com/blog/what-is-ux-design-15-user-experience-experts-weigh-in)
+
+- It can even become difficult to tell what companies ***really do*** by reading their about pages and headlines
+
+  - Nobody wants to say "we make good websites"
+
+#### User Experience Design
+
+- **User Experience Design** = involve designing products and services with a focus on **user experience**
+  - **User Interface Design** : as we have learned it, is a *subset* of User Experience Design
+  - UX Design can allow us to design for other features not typicalled included in UI design
+
+#### User Experience Design Goals (may include)
+
+- **Habit (or even addiction)**:
+
+  - We may attempt to design habit-forming experiences
+  - This necessarily involves a broader view than the UI
+
+- **Engagement:**
+
+  - We may attempt to design for ***engagement***, i.e. emotional involvement and commitment
+
+- **Emotions**:
+
+  - We may attempt to design for specific emotions
+  - e.g. if you're designing a haunted house, you would want people to be afraid or scared
+
+  ![image-20201110164021362](images/lecture/image-20201110164021362.png)
+
+### UX Design "4 Quadrants"
+
+- **Experience Strategy (ExS):**
+  - About developing a holistic business strategy
+- **Interaction Design (ID)**
+  - How users interact with the system
+  - Effectively its UI design as we learned it in this course, but typically in this breakdown UI is thought of as "*just the surface design of the app*"
+- **Information Architecture (IA)**
+  - Organization of information in a meaningful and accessible way
+- **User Research (UR)**
+  - Also known as user experience research
+
+#### User Experience Research
+
+- **User Experience Research** = the systematic study of target users and their requirements, to add realistic contexts and insights to design processes
+  - roughly speaking a synonym for user research 
+    - User analysis, task analysis, usability testing
+    - same techniques are used: interviews, surverys, etc.
+
+#### Information Architecture 
+
+- How is the information organized?
+  - **Hierarchically:**
+    - By order or by importance?
+      - headline news vs. less important items
+  - **Sequentially:**
+    - in a path for the user to follow?
+      - Select pizza size, then select pizza toppings, then select pizza side orders (dipping sauce)
+  - **Geographically**:
+    - By location?
+  - **Matrix:**
+    - Allows users to view data by topic, by date, and other options?
+  - **Chronologically:**
+    - By date or order of publishing?
+  - **Alphabetically:**
+    - By date or order of publishing?
+  - **Organization by Topic or by Audience Type?**
+- IA also includes information labeling, searching, and navigation systems
+- Navigation systems is where we might use **card sorting** to determine how users "group" and label information
+  - e.g. user would think of "movies and video games" as being one category, so we merge them
+  - But users would also think of Blu-ray players as being underneath electronics, so we list them there
+
+#### Experience Strategy
+
+- **Experience Strategy** = setting guiding principles and a vision for the customer experience
+  - may include (from *[UX Collective](https://uxdesign.cc/the-product-designer-role-and-good-qualities-to-become-one-cc62b57f895f)*):
+    - Customer segments
+    - Key partners
+    - The company value propositions
+    - Channels (online/offline, different platforms, etc.)
+    - Key resources (content, patents, users traffic, etc.)
+- Includes *"touchpoints"* and channels that are outside of the UI but influence UX
+  - e.g. hosting an informational event to sell and inform users about your product and get them excited
+  - e.g. position how users should feel about th eporduct or service before they even use it
+- There is even some research providing evidence that this isn't all meaningless... exposure to a brand might ***actually*** change your behaviour
+  - Study showing that brief exposure to Apple logo would make people more creative [src](https://today.duke.edu/2008/03/apple_ibm.html)
+
+#### Content Strategy
+
+- **Content Strategy** = focuses on the planning , creation, delivery, and governance of content
+  - very import for User Experience
+    - Usability can be excellent, but if the right content isn't there at the right time, UX will suffer immensely
+  - Involves processes and best practices not unlike those we've used in UI design, User Help, etc.
+
+#### Content Lifecycle
+
+- Erin Scime's content lifecycle stages
+  - **Audit and Analysis:** content stakeholder interviews, competitive analysis, objective analysis, and evaluation of the content evnrionment (site, partner content, sister, parent sites)
+  - **Strategy:** Determine topical ownership areas, taxnomy, process/workflow for content production, souring plan, voice and brand definition
+  - **Plan:** Staffing recommendations, content management system customization, metadata plan, communications plan, migration plan
+  - **Create:** Writing content, asset production, governance model, search engine optimization, quality assurance
+  - **Maintain:** Plan for periodic auditing, advise the client, determine targets for success measures
+
+##### Content Strategy Best Practices
+
+- **Reflect your organization's goals and user's needs:**
+  - You can discover your user's needs through conducting market research, user research, and analyzing web metrics
+- **Understand how user's think and speak about a subject:**
+  - Content should be created and structured based on that. 
+  - Doing this will also help oyu with search engine optimization (SEO)
+- **Communicate to people in a way that they understand:**
+  - Embracing plain writing principles helps with this
+- **Be Useful**
+  - By being purposeful in the content that you include, omit the needless
+- **Stay up-to-date and remain factual**:
+  - When new information becomes available, update your content or archive it
+- **Be accessible to all people:**
+  - You have a responsibility to make sure that all people can access and benefit from your information
+- **Be consistent**
+  - Following style guides, both for language and design, helps people understand and learn what you are trying to communicate
+- **Be able to be found**
+  - Make sure that users can find your content both internally through naviagation and also externally through search engines
+- **Help define the requirements for the overall site**
+  - Content should drive design, structure, etc.
+- 
 
 ## Lecture 20 | Gamification - 2020-11-06
 
@@ -2375,3 +2514,938 @@ navigator.geolocation.getCurrentPosition(
 - Let users decide their own goals and rewards
   - in a fitness application, users could decide their weight loss goals and associated rewards
 
+## Lecture 21 | Video Games - 2020-11-10
+
+### Video Games
+
+- **Video Games** are a part of *Human Computer Interfaces*
+  - Remember: HCI is more than ***point and click*** interfaces
+  - Inlcudes video games, simulations, etc.
+- Video games are on of the most widespread HCI
+  - **$160 billion** dollar industry as of 2020 [src](https://www.statista.com/statistics/292056/video-game-market-value-worldwide/)
+  - **2.7 billion gamers** in the world as of 2020 [src](https://www.wepc.com/news/video-game-statistics/)
+
+- Though video games have similarities with regular interfaces, some interesting properties set them apart
+
+#### Similarities
+
+- Video games are designed with **goals** related to the *user's **performance, satisfaction, feelings*** etc.
+  - Subjective satisfaction translates as a UI goal to video games
+- Video games are designed according to target audiences, using design heurisitcs, principles, and theories
+- Tested with users, to identifiy usability (gameplay) issues and analyze how game meets goals
+
+#### Differences
+
+- Regular interfaces have the purpose of allowing users to complete tasks they already have
+  - Outside of serious games, video games have *no* external purpose
+    - played for their own sake
+- The taks are actually assigned ***by the interface*** for the user to accomplish
+  - Find all the power moons - Mario Oddysey 
+  - Complete reversal from typical interfaces
+- **Regular Interfaces** are expected to be as unobtrusive and usable as possible
+  - with **video games** the interface *is* the game itself
+- **Regular Interfaces** are ideally error free for the user
+  - **video games** have the user expected to make errors and face constraints *as part of the design*
+    - A game with *no errors* would probably be boring
+    - *good* errors and *bad* errors
+- **Video games** represent a *fundamentally different* design challenge than producing UIs that allow users to accomplish tasks efficiently
+
+- Many video games are centred on **real-time** computer graphic simulations made using the rendering API of a game engine
+  - Involve fundamentally different technologies than documents rednered from markup languages
+  - Real-time simulations use similar technologies
+- Even more than regular interfaces, video games blend aspects of the arts, humanities to produce good UX
+  - Art, character design, music, narrative, story, etc.
+  - Video games don't just use are, they are a form of art themselves
+
+### Video Game UI Goals
+
+- We can make a distinction between traditional usability and play within video games
+
+  - Play is where traditional usability doesn't totally apply
+
+- Traditional usability goals do apply to video games in many respects
+
+  - **Visibility of system status** - health bar, ammo count, etc
+
+    ![image-20201110114701018](images/lecture/image-20201110114701018.png)
+
+  - **Error prevention** - menu confirmation dialogues
+
+    ![image-20201110114722700](images/lecture/image-20201110114722700.png)
+
+  - **Consistency** - using similar buttons for similar actions across games ("A" for jump)
+
+### Why do People Play Video Games?
+
+- The motivations to play video games are central to *why* traditional UI analysis doesn't always apply
+  - **Play**: is a range of intrinsically motivated activities done for **enjoyment** and **recreation** *rather than* a **serious** or **practical** purpose
+
+### Intrinsic Motivations
+
+- Research by **Scott Rigby** et al. shows gaming fufills *three* psychological needs in particular
+- Based on rigorous analysis of studies conducted at video game studios themselves, surveying gamers
+- Video games in this sense are about *improving psychological wellness*
+  - at least in the shorter term
+
+#### Psychological Needs
+
+- How good does it feel when you finally get the "Master Sword" in a Zelda game?
+
+  ![image-20201110115047994](images/lecture/image-20201110115047994.png)
+
+1. **Need For Competency**
+   - Progression through a game (eg. levels)
+   - Learning new abilities (e.g. new in-game attacks)
+   - Enhanced player chracteristics (e.g. hearts/health)
+   - Recognizing progression with badges, player changes, social recognition
+
+- Ever roam the streets in Grand Theft Auto without going on a mission?
+
+2. **Need for Autonomy**
+   - Autonomy in real-life is lacking for many people
+   - High consequences for acting on the autonomy we do have .. quit your job, you can't pay your rent
+   - Games allow for lots of consequence-free autonomy, in situations normally inaccessible to the player
+   - e.g. building a city however you like in SimCity
+
+- Is gaming as fun without the ability to trash talk ?!
+
+3. **Need for Relatedness**
+   - We want to *feel* like we matter, provide value in society, cooperate with others, and compete(get ahead)
+   - Massively multiplayer games are an obvious example of this e.g. raids in WOW
+   - But even interaction with non-playable characters can provide a sense of relatedness too
+
+#### Is There a Risk to Fufilling Psychological Needs Through Video Games?
+
+- Study with $n=2700$ individuals showed negative correlation between problematic video gaming and psychological functioning with regard to psychological symptoms, affectivity, coping, and self esteem
+  - i.e. video games might be used as an escape
+    - Poor competency, autonomy, and social relatedness in real-life?
+    - VIdeo games make all of this easier. Maybe too easy
+  - Key term is ***problematic gaming***, many things can be abused though .. there's benefits too!
+    - Many studies find gamers generally happier and leathier than non-gamers
+
+### Video Games Can be Beneficial
+
+- Potential for improvement of cognitive skills
+  - Spatial navigation, reasoning, memory, mulittasking, and perception
+  - Many cognitive skills htat are important for STEM fields, mathematics
+- Psychological Wellness
+  - Imporved mood, relaxation instead of anxiety
+- Social Benefits
+  - Most gamers play with others, may involve cooperation
+
+### Games as Art and Recreation
+
+- In this sense video games have similar benefits to consumption of art in general
+  - Watching *sad* movies has been shown to be therapeutic
+- Video games act as a form of communication and spreading of cultural ideas
+  - **Game studies** = acamdeic area that studies the intersection of games, players, and culture
+  - Current research into **pro-social games** hat encourage helping behaviours, as well as representation in games
+
+### How Can We Design Better Games?
+
+- Much of what we've learned is applicable to the design of video games
+  - Knowing your audience (user research)
+  - Design guidelines (heuristics), principles, theories
+  - Usability testing (play testing)
+- Design heurisitics have been developed for video games, incorporating psychological needs
+  - [Using Heurisitics to Evaluate the Playability of Games]([http://210.240.189.214/gamedesign/resources/02_class/02_class2/00_game_paper/BIT094101/BIT094101_Late%20breaking%20result%20papers_Using%20heuristics%20to%20evaluate%20the%20playability%20of%20games_%E4%BE%AF%E6%84%B7%E5%9D%87.pdf](http://210.240.189.214/gamedesign/resources/02_class/02_class2/00_game_paper/BIT094101/BIT094101_Late breaking result papers_Using heuristics to evaluate the playability of games_侯愷均.pdf))
+
+#### Some Game Play Heuristics
+
+- Provide clear goals, present overriding goal early as well as short-term goals throughout play.
+- Game play should be balance with multiple ways to win
+- Player is taught skills early that you expect the players to use later or right before the new skill is needed
+  - Think *Zelda*, the first half of the dungeon is very difficult with enemies that have challenges, but once the player obtains a special item in the dungeon, the enemies are able to be defeater much easier.
+- Player's should percieve a sense of control and implace onto the game world
+  - The game world *reacts* to the player and *remembers* their passage through it
+  - Changes the player makes in the game world are persistent and noticeable if they back-track to where they've been before
+- The game should give rewards that immerse the player more deeply in the game by increasing their capabilities (power-up), and expanding their ability to customize
+- Pace the game to apply pressure but not frustrate the player
+  - Vary the difficulty level so that the player has greater challenge as they develop mastery
+  - ***Easy to learn, hard to master***
+    - Low skill floor, high skill ceiling
+- Challenges are *positive game experiences* , rather than a negative experience
+  - Results in wanting to play more, rather than quitting
+
+#### Game Story Design Heuristics
+
+1. Player understands the story line as a single consistent vision
+2. Player is interested in the story line. The story experience relates to their real life and grabs their interest
+3. The player spends time thinking about possible story outcomes
+4. The player feels as though the worlds is going on whether their character is there or not
+5. The player has a sense of control over their chracter and is able to use tactics and strategies
+6. Player experiences fairness of outcomes
+7. The game transports the player into a level of personal involvement emotionally (e.g. scare, threat, thrill, reward, punishment) and viscerally (e.g. sounds of environment)
+8. Player is interested in the characters because (1) they are like me; (2) they are interesting to me, (3) the characters develop as action occurs
+
+## Lecture 22 | Simulations, Game Loops, and Game Enginees - 2020-11-12
+
+### Simulations
+
+- **Computer Simulations** = use step-by-step methods to explore the behaviour of a mathematical model
+  - Often the model is of some physical system
+  - e.g. climate change simulations, 9/11 tower simulations
+- **Interactive computer simulations** = involve human interaction 
+  - sometimes *"human in the loop"*
+  - e.g. flight simulators, surgery simulators, etc.
+  - often used in ***education, healthcare, machinary training***
+    - cost of mistakes too high (lives lost)
+    - Simulations can provide opportunity to learn with no cost to making mistakes
+- **Virtual simulations** = are the recreation of reality depicted on a computer screen that injects humans in a central role by exercising motor control skills, decision skills or communication skills
+  - - This is distinct from the usage of **virtual reality headsets**
+    - Virtual simulations can be point-and-click interfaces for examples and still "simulate reality"
+- Simulations are closely related to **video games**
+  - some video games market themselves ***as*** simulations
+  - May use simular inputs, may be built with similar technologies
+
+#### Virutal Simulations
+
+- In attempting to recreate reality, virtual simulators may use unconventional HCI inputs/outputs
+- Virtual simulation display *outputs:*
+  - Head-mounted displays
+    - considered a ***VR headset*** if an interial measure unit is included to track and respond to headmovement
+  - Wrap-around displays
+    - Can be used to immerse the user in a cockpit
+  - CAVE displays
+    - Visualizations projected onto 4 surrounding surfaces allowing user to enter a "cave"
+
+##### Virtual Simulation I/O
+
+- **Haptic Technologies** = create an experience of touch by applying forces, vibrations, or motions to the user
+  - Useful for simulating situations such as the usage of surgical tools
+    - Resistance can be felt, approximated to real resistance, creating a more immersive and realistic experience
+  - The "rumble" feature found in modern video game controllers i an example of haptic technology
+- **Omnidirectional Treadmills** = treadmill that allows a user to walk or run in any direction while capturing their motion
+- **Motion Capture Suits** = suit that record body movements
+  - May incorporate haptic feedback
+- High fidelity controls and instrumentation
+  - e.g. realistic truck controls or airplane cockpits
+
+### Designing Simulations
+
+- Everything we've talked about with regular interfaces applies to simulation interfaces
+  - Design heuristics, principles, and theories, etc.
+- Specialized design guidelines have been developed for virtual simulations and virtual reality
+  - Though far less research in this area exists
+  - Less users and applications, highly specialized, and more novel
+- With virtual simulations that attempt to recreate real situations, an additional UI goal is to meaningfully recreate the situation for the users
+  - As a result, many guidelines are focused on this goal either through increased sense of immersion, or increased recreation of reality
+
+#### Heuristics for VR
+
+- **Synchronous Body Movements**
+  - The system and interface should stay in synchronicity with human head and body movements in real time to prevent lag
+- **Physical Space Constraints**
+  - System designers should try to account for the real-world physical space users will occupy when interacting with the system
+- **Immersion**
+  - The system should immerse the user in virtual reality, specific to visual realism
+- **Glitchiness**
+  - The system should promote a streamlined experience by keeping systematic glitches low
+- **Minimize switching between actual and virtual world**
+  - The system should be able to rely on itself for all usage
+  - Keep all necessary user tasks and inofrmation within vr
+    - don't create tasks that the user may only be able to execute when VR headset is off
+    - i.e. *don't break immersion*
+- **Cord Design**
+  - The cord of the system should be designed such that VR usage requires minimal maintenance
+  - e.g. providing adequate length and mobility to keep entanglement to a minimum
+- **Headset comfort**
+  - The headset of the system should be designed to be comfortable for prolonged wear
+- **Mental Comfort**
+  - The system should be designed to prevent sesnations of physicall illness during use, by preventing jarring movement lag, increasing realism of visuals, and so on
+- **User Interface Design**
+  - The system's interface and hardware controls should have an intuitive design and navigation adhering to usability conventions
+  - Nielsen's Ten Usability Heurisitcs for user interface design can be referred to as a full guide for interface design 
+
+#### More Research
+
+- Research is very active in this area, new heuristics proposed
+- **Natural Action-Control Mapping**:
+  - To maximize plausibility
+    - object manipulation and controls related to the user's task need to leverage natural **affordances** for any interaction metaphors
+    - Actions are realized via a variety of devices (data gloves, etc.) mapped to VE elements (hands, arms, artifacts), combined with a choice of feedback modalities( audio, haptic, visual)
+
+## Lecture 2x? | UX/UI Design Process: More Design Processes
+
+### User Centred Design
+
+- **User Centred Design** = an approach and process in which the user's needs, wants, limitations, characteristics, and goals are taken into account during each phase of the design process
+  - Now prolific, at least in some part of design processes, if not in whole
+  - What would be considered the opposite of user-centred design? 
+    - Machine-centred design?
+  - Most directly connects with all the concepts we've talked about in the course:
+    - User analysis
+    - Task analysis
+    - Prototyping
+    - Design Heuristics, principles, and theories
+    - Usability testing
+    - Heuristics reviews
+- User centred design as a process can be split into 4 phases
+
+#### Design Phases
+
+- **Specify the context of use:**
+
+  - Identify the people who will use the product, what they will use it for, and under what conditions they will use it
+    - User analysis, tasks analysis
+
+- **Specify requirements**:
+
+  - Identify any business requirements or user goals that must be met for the product to be successful
+    - Task hierarchy, traditional requirements
+
+- **Create design solutions**:
+
+  - Building from a rough concept to a complete design
+    - Prototyping, implementation
+
+- **Evaluate Designs**
+
+  - Evaluation - ideally through usability testing with actual users --- is as integral as quality testing is to good software development
+    - Usability testing, heuristic evaluations, etc.
+
+  ![image-20201119114054728](images/lecture/image-20201119114054728.png)
+
+#### Design Principles
+
+- A User-centred design approach conforms to these principles:
+  - Design is based upon an eexplicit understanding of users, tasks, and environments
+  - Users are involved throughout design and development
+  - Design is driven and refined by user-centred evaluation
+  - Process is iterative
+  - Design addresses the whole user experience
+  - Design team includes multidisciplinary skills and perspectives
+
+#### What's the Difference From *Design Thinking*?
+
+- The 4 phases of user-centred design overlap with the 5 phases of design thinking
+  - Specify the context of use -> emapthize
+  - Specify requirements -> define 
+  - Create design solutions -> ideate, prototype
+  - Evaluation designs -> test
+- The difference if really not well-defined, matter of opinion
+
+- Can say for sure:
+  - Design thinking emphasizes empathy, problem definition, ideation, and other approaches
+    - These can be used as part of user-centred design too
+  - Design thinking is more generally creative problem solving process, where as user-centred design is more greated towards traditional engineering of an interface (specifically "specifying requirements")
+    - Again though, nothing stopping design thinking process from using formal requirements
+- Bottom -line more in common than different
+
+#### Alternatives
+
+- **"Function Centred Design"**
+  - Designs focused on implementing functions
+  - The term is informal, and this isn't something people generally do purposefully
+- We see this early-on in the development of new technologies, as economically design effort is spent on ***just making the thing do what it needs to do***
+  - Early computing was like this
+    - Design efforts were spent just making computers that could function in terms of carrying out tasks with sufficient performance
+    - It wasn't until the 1980s when those problems were solved that efforts could turn to learnability
+- **"Design by Default"**
+  - The designer creates a system haphazardly based on their own intuition and preferences
+    - i.e. ***not purposely designed***
+    - This might actually work... but it might not
+    - May actually work really well if the designer is also the user or representative of users
+- Design by mimicry
+  - Design based on what others have done
+
+### Human-Centred Design
+
+- **Human-Centred Design** = an appraoch to interactive systems development tha taims to make systems usable and useful by focusing on the users, their needs, and requirements, and by applying human factos/ergonomics, and usability knowledge and techniques. 
+  - This approach enhances effectiveness, and efficiency
+  - Improves human well-being, user satisfaction, accessibility, and sustainability
+  - Counteracts possible adverse effects of use on human health, safety, and performance
+  - ***i.e. using all the things we've learned in this course***
+
+- Human centred design is also discussed as both an approach and a process depending on source
+- Human-centred design is argued by some to be synomymous with user-centred design
+  - Others argue that human-centred design is more general a process than designing interfaces 
+- Again, the process phases largely overlap with design thinking (and user-centred design)
+
+#### Design Process
+
+- **Inspiration** = learning about and becoming empathetic with your users
+- **Ideation** = is about generating possible solutions
+- **Implementation** = about implementing and testing a solution
+
+### Related Niche Design Appraoches
+
+- **Use-centred design** = a more niche design appraoch that is more focused on the problem domain and related tasks and goals
+- **Usage-centred design** = another niche design approach that is focused usage patterns, use cases, and tasks analysys
+  - usage of UML diagrams
+
+#### Participatory Design
+
+- **Participatory design** = an approach to design that involves users and potentially other stakeholders in the design process
+  - Users and others are "first-class citizens" in the sense that they participate actively in the same ways as designers
+  - Sometimes participatory design is called **co-design** or **co-operative design**
+  - Participatory design goes beyond interviewing a surveying users, it involves users helping to ideate and prototype solutions
+- The fact that users are invested in the design may be the largest factor in increased user acceptance of the design
+- Increase in time commitment
+- Risk that unused designs and design suggestions from users and stakeholders may actually alienate users
+- Participatory design can take the form of interviews and other data like user journals
+- Approaches may also involve users in the ***design itself***:
+  - e.g. having users generate paper prototypes as a divergent thinking exercise
+  - e.g. having a group of stakeholders sketch designs together on whiteboards
+  - e.g. having users help to make decisions about the design of high-fidelity prototypes
+
+- Something to consider: *can all participants really be **first class citizens?***
+  - Lack of knowledge, power dynamics
+  - If I asked people what they wanted, they would have said faster horses - Henry Ford
+- Stakeholders have ***interests***:
+  - e.g. tech support will want a system that is less error prone first and foremost but will that come at a cost?
+- Participants may be from vulnerable populations
+  - e.g. working with children or those with cognitive impairments, it must be done with sensitivity to really be able to claim it was "participatory design"
+
+### Lean Startup Methodology
+
+- **Lean Startup Methodology** = aimed at rapidly discovering whether a business model is viable
+  - Lean startup methodology inspired **lean UX**
+- **Minimum Viable Product (MVP)** = "the version of a new product which allows a team to collect the maximum amount of validated learning about customers with the least effort" - Eric Ries
+
+#### Lean Startup 
+
+- Lean startup methodology involves forming testable hypothesis based on assumptions
+
+- Lean startup methodology has 3 phase
+
+  1. Build - an MVP to test hypothesis
+  2. Measure - measure its effectiveness in the market
+  3. Learn - learn from the experiment, create new hypotheses
+
+  
+
+  Repeat these phases to build *better and better* MVPs
+
+  
+
+- Be open to ***pivoting*** idea during iteration
+
+- Borrows from the scientific method
+
+  - Learning from testing a hypothesis
+
+- Lean startup is the opposite of ***big design upfront***
+
+  - Instead of doing an extensive **business plan** based on interviews and market research, using best practices and theories
+    - build and you learn
+
+- Can be very cost effective 
+
+  - Quickly get to something that functions, and iterate while testing and learning to improve
+
+#### UX Equivalent to Business Plan
+
+- In UX / UI design the equivalent to a business plan would be "deliverables" like:
+  - Surveys
+  - Interviews
+  - Personas
+  - Empathy maps
+  - Problem statements
+  - Task hierarchies
+  - Ideation prototypes
+  - All the documentation "stuff" that isn't your solution to the problem
+- Requires ***a lot of work*** and time/resources
+
+#### Lean UX 
+
+- Lean UX is essentially the "lean" approach applied to UX design
+- Three Phases
+  - **Think** - create hypothesis based on assumption
+  - **Make** - create prototypes ("MVP") to test hypothesis
+  - **Check** - check prototypes with users
+- Again, these phases are done in short cycles to refine the MVP based on what is learned
+
+#### Lean UX Principles
+
+- Participatory design
+  - Stakeholders should work together collaboratively
+- Be willing to pivot
+  - If a design doesn't work, it's quickly thrown out ("fail fast")
+- Less "deliverables" and design upfront
+  - Stages in other methods generate deliverables to guide the next stage
+  - e.g. empathy stage in design thinking might generate interview data, surveys, empathy maps, etc.
+  - Lean UX is about building the MVP and learning from testing it with users
+
+### Can Processes Work Together
+
+- Can different
+
+## Lecture 2x? | Accessibility - 2020-11-24
+
+### Accessibility
+
+- **Accessible design** = design of interfaces such that they are usable by people with disabilities
+  - **Disability** = any condition that makes it more difficult for a person to do certain activities or interact with the world around them
+
+ ### Disability
+
+- The definition of a disability is contentious
+  - e.g. is someone disabled by their body, or by a world that does not accommodate their body?
+  - This is ***really important*** way to view disability
+- Disability is a form of identity for many people
+  - **Ableism** is a discrimination in favour of people with disabilities
+- As we age and our cognitive abilities decline to an extent many of us will have a disability at some point in our lives
+
+#### Visual Impairments
+
+- Emples
+  - Blindness
+  - Colour-blindness
+  - near and far sightedness
+- Colour blindness effects about 300 million people worldwide
+  - Including 1 in 12 men, and 1 in 200 women
+
+##### Designing for Colour-Blind Users
+
+- Use symbols, lablels and or textures to communication information in addition to colours
+  - Can be implemented by themes with deliberate colour choices
+
+![image-20201124114450080](images/lecture/image-20201124114450080.png)
+
+- Specific themes can be created tailored for colour blind users with colour choices designed for specific types of colour blindness
+
+  ![image-20201124114553245](images/lecture/image-20201124114553245.png)
+
+- Use underlined links
+
+  - Makes it easier to distinguish links from text
+
+- Don't use colours to guide users in text help 
+
+  - e.g. "click on the red button"
+
+- Avoid certain colour combinations:
+
+  - *green-red*
+
+  - *green-blue*
+
+  - *green-brown*
+
+  - *blue-gray*
+
+  - *light-green-yellow*
+
+  - *blue-purple*
+
+    ​	![image-20201124114728630](images/lecture/image-20201124114728630.png)
+
+- Use alt text with images
+
+- Use properly structured HTML to help screen readers
+
+  - e.g. put your headings in header tags even if you're using CSS to style headings however you ike
+
+- Use larger font sizes, clearly legible fonts, support magnification
+
+- If refering users to figures for information, describe the information with text too
+
+  - e.g. if you say "see figure 2.1" and figure 2.1 shows increased performance for X over Y, describe this in your text as well ... otherwise visually impaired users don't have this information
+
+- **Refresh-able braille displays**
+
+  - Can display braille characters by selectively pushing pins through holes
+
+- **Screen reader**
+
+  - Software can read characters and possibly images on screen and produce speech or braille output
+    - e.g. Apple accessibility
+
+#### Hearing Impairment
+
+- **Hearing Loss** = partial or total inability to hear
+  - Examples:
+    - **Tinnitus** - hearing with noise or ringing sound
+    - **Crackling Tinnitus** - tinnitus with a crackling sound
+    - **Perceptive deafness** - sound is distorted
+  - Hearing aids may be used to assist people with hearing loss and impairments
+
+##### Designing for Hearing Impairments
+
+- Allow for volume control
+- Provide text transcriptions of audio content
+  - Speech recognition is now available via several APIs and has reached human-parity milestones
+- Sign language interpretations of audio content can be provided
+  - Audio/text to sign language tools do exist [github](https://github.com/sahilkhoslaa/AudioToSignLanguageConverter)
+
+#### Speech Impairments
+
+- **Speech Impairments** = range from issues like stuttering to lacking the ability to speak at all
+  - Examples:
+    - **Dysarthria** - slurred, slowed speech due to muscle or nerve damage
+    - **Spasmodic Dysphonia** - vocal cord spasms cause hoarse, jittery or shaky speech
+  - Wee need to consider things like *accents* as well
+
+##### What about VUIs?
+
+- Provide alternative forms of input and output
+
+  - Text output of audio
+  - Selection of options for inputs
+
+- Ultimately though, a VUI-only app is inherently a hard barrier to accessibility
+
+  >  "Any application that uses VUI without also presenting a GUI on parity is inaccessible and is not in compliance with Section 508 or the W3C's WCAG 2.1 accessibility standards" [src](https://jimgriesemer.medium.com/once-again-a-discussion-regarding-vui-is-ignoring-the-critical-requirement-of-accessibility-5917c9335897)
+
+#### Motor Impairments
+
+- **Motor Impairments** = partial or total loss of function of a body part
+  - Examples:
+    - loss of limb
+    - Paralysis
+    - Cerebral Palsy
+    - ALS
+    - Arthritis
+  - May prevent users from using conventional inputs such as keyboard, mouse, or touchscreens
+
+##### Technologies for Motor Impairments
+
+- Assistive technologies can help with motor impairments, for example
+
+- **Head wands** - worn over the head or jaw and allow the user to manipulate interface
+- **Sip-and-Puff Switch** - is operated by blowing into a mouthpiece
+- **Vocal Joysticks** - Map vocal sounds to directions and movements
+
+##### Designing for Users with Motor Impairments
+
+- We can also design interfaces to better support those with motor impairments
+- Add search functionality to your application
+  - Search functionality can be used with speech recognition supports, which is easier to use than navigation
+- Minimize number of actions to perform tasks
+  - Can you allow users to skip ahead of groups of content rather than move through them individually
+- Support navigation with keyboard
+  - Mouse or trackpad use may not be possible for those with motor impairments
+  - Supports access keys to allow users to directly access tasks
+
+#### Learning Disabilities
+
+- **Learning Disability** = an area of weakness or inefficiency in brain function that significantly hinders our ability to learn
+  - Can effect an individual's ability to read, write, memorize, conduct maths, and other cognitive abilities
+  - Strong user help support can be key to supporting learning disabilities in interface design
+
+##### Designing for Learning Disabilities
+
+- **Help users understand what things are and how to use them**
+  - This often involves:
+    - Using things that are familiar to the user
+    - Using familiar symbols, terms, design patterns
+- Ensure processes do not rely on memory
+- W3C - MAking Content Usable for People with Cognitive and Learning Disabilities [src](https://www.w3.org/TR/coga-usable/)
+
+#### Dyslexia
+
+- **Dyslexia** = learning disorder that invovles difficulty reading due to problems identifying speech sounds and learning how they relate to letters and words (decoding)
+  - Also called reading disability, dyslexia affects areas of the brain that process language
+  - Not a vision or intelligence issue
+  - effects 3-7% of people, but up to 20% have some symptoms
+
+##### Designing for Dyslexia
+
+- Avoid using high contrast levels, provide past backgrounds (themes!)
+- Use font know to be better for those with dyslexia
+  - Sans serif
+  - open dyslexic
+  - Comic sans
+- Keep it to 45 characters or less in a line
+  - Supported by studies
+- Support text with icons
+- Use illustrations, charts, pictograms wherever possible
+- Support auto-fill on inputs when possible
+
+### Assistive Technologies
+
+- **Assistive Technology** = assistive, adaptive, and rehabilitative devices for people with disabilities or the elderly population
+  - includes technologies like hearing aids
+  - Also includes technologies that enable users to access interfaces, such as screen readers
+    - We can also design our interfaces in support of them being accessed with these technologies
+
+### Universal Design
+
+- **Universal Design** = the "design of products and environments to be usable by all people, to the greatest extent possible, ***without the need for adaption or specialized design***"
+  - Universal design ***includes accessibility***
+  - Also a broader concept, including non-disabilities like age and language
+
+### Special Accessible Interfaces
+
+- The problem with designing a special alternative accessible version of an interface is that you now have *two interfaces* to maintain
+  - Will you have the resources to keep this up?
+  - Do you have a system for managing changes across both interfaces? Even small changes?
+  - Maybe if you have access to enough resources, this is a viable approach, but generally is in-advisable
+- Generally better to make *one interface* that is designed to be accessibile
+
+### Principles of Ability based Design
+
+1. **Ability** :
+
+   > Designers will focus on user's abilities, not disabilities, striving to leverage all that users can do in a given situation, context, or evnrionment
+
+2. **Accountability**:
+
+   > Designers will respond to poor performance by changing systems, not users, leaving users as they are.
+
+3. **Adaption**:
+
+   > Interfaces may be adaptive or adaptable to provide the best possible match to users' abilities
+
+4. **Transparency**
+
+   > Interfaces may give users awareness of adaptive behaviours and what governs them, and the means to inspect, override, discard, revert, store, retrieve, preview, alter, or test those behaviours
+
+5. **Performance**
+
+   > Systems may monitor, measure, model, display, predict, or otherwise utilize users' performance to provide the best possible match between systems and users' abilities
+
+6. **Context**
+
+   > Systems may sense, measure, model, portray, or otherwise utilize context, situation, or environment to anticipate and accomodate effects on users' abilities
+
+7. **Commodity**
+
+   > Systems may comprise low-cost, inexpensive, readily available commodity software, hardware, or other materials that users have the ability to procure
+
+#### Legal Requirements
+
+- Making interfaces accessible isn't just morally correct, it's increasingly legally required
+  - Accessibility for Ontarians with Disabilities Act (AODA)
+    - "Beginning January 1, 2021: all public websites and web content posted after January 1, 2012 must meet WCAG 2.0 Level AA other than criteria 1.2.4 (live captions) and 1.2.5 (pre-recorded audio descriptions)"
+
+## HCI Research | 2020-11-26
+
+### HCI Research
+
+- Peer-reviewed HCI research is done to improve our knowledge about HCI in general
+- Papers are written and published in journals such as *Computers in Human Behavior*
+- Results may be presented at conferences such as ACM CHI Conference on Human Factors in Computing Systems
+- Work may originate from academia or industry
+- Different from **research and development** which is focused on creating new products and services
+- Of course, there is overlap!
+  - New products and services may involve knowledge discovery
+  - And we may produce new products and services as part of knowledge discovery
+
+***Building to learn*** vs ***learning to build***
+
+
+
+### HCI Research Types
+
+- There are different types of HCI research which create different forms of new knowledge 
+  - See:  [Research Contribution Types in HCI](http://www.cs.umd.edu/hcil/chi/ResearchContributionTypes.pdf)
+
+#### Emprical Reseach
+
+- **Empirical Research** = reports findings based from systematically observed data
+  - The idea is to generate previously unknown insights based on newly obtained data
+  - **Empirical research** methods include:
+    - Formal experiments
+    - Field studies
+    - Usability tests,  etc.
+  - Proper methods must be followed to generate evidence and insights that are trustworthy
+
+#### Artifacts 
+
+- **Artifacts** = new inventions, which could be anything from new software, prototypes, tools, technologies, or techniques
+  - eg. a new algorithm for predictive text input
+  - Artifacts are often formally evaluated as part of reporting the research done, though reporting is more holistic than in empirical research
+
+#### Methodological Research
+
+- **Methodological Research** = develops new or improved methodologies for research or designing new interfaces
+  - Methods need to be validated, usually though some experimentation
+  - Methods need to be described well enough to be duplicated
+
+#### Theoretical Research
+
+- **Theoretical Research** = creates new models, frameworks, and principles
+  - *Theories* provide us with "ways of thinking" about problems
+    - usually based on data and evidence
+  - An example would be the paper: *Gamification: Using game design elements in non-gaming contexts* which provided a more rigorous definition of gamification
+  - A theory's value comes from its ability to predict and/or explain future situations, and so for a theory to be embraced it must do so in longer term
+
+#### Dataset Creattion
+
+- A **dataset** may be provided to the research community as a research contribution
+  - eg. a dataset for behaviour of undergraduate students with Snapchat across a year of study
+  - Datasets can provide value to other researchers who can analyze the dataset
+
+#### Survey Research
+
+- **Survey research** = work done that sysnthesizes and summarizes existing research work
+  - Surveys can identify common findings and gaps in the research where there may be new opportunities
+
+#### Opinions
+
+- **Opinions** = are a form of research intended to persuade the reader regarding a position
+  - Evidence and data will be cited to support the position
+  - Opinions tend to be much more rigorous than to say an "op-ed" in a newspaper 
+  - Difference between opinion and other forms (survey, theoretical) is the attempt to persuade rather than inform
+
+### Experiment Design
+
+- HCI Research is highly dependent upon experiments conducted with human participants
+  - See Chapter 5 of Human-Computer Interaction: An Empirical Research Perspective
+- Signal to Noise analogy is one way of understanding the goals of these experiments 
+  - We need to design experiments that allow us to observe the ***signal*** despite the ***noise***
+  - The signal is something we wish to measure (how does a touchscreen compare to a physical keyboard?)
+  - The noise is everything else that could interfere with the signal ( were the users sitting down or standing up?)
+
+![image-20201207220240186](images/lecture/image-20201207220240186.png)
+
+- **Methodology** = a way in which an experiment is designed and executed
+  - Result from experiments without a methodology aren't very useful (*non-reproducible*)
+  - Experiments without carefully designed methodologies cannot separate ***signal*** from ***noise***
+- **Factorial Experiments** = expose participants to levels of factors and observe the results 
+  - Factors are variables, and levels are values
+  - e.g. A factor could be a type of interface, and the levels could be interface A and interface B
+
+#### Experiments involving humans
+
+- Experiments involving human participants have a long history in psychology & HCI borrows most from this area 
+
+##### Ethics Approval
+
+- Modern research requires **ethics approval** from the governing body overseeing the research
+  - e.g. McMaster Research Ethics Board (MREB)
+- If you want to conduct research with human participants, you need to have it approved by the MREB
+  - This applies to things that can even be perceived as research by those outside McMaster
+  - To those outside McMaster, it might as well be "McMaster research" that is being done otherwise
+  - e.g. students conducting tests of their class work with participants outside the McMaster community
+- Process can be lengthy and time consuming
+  - But it's very rigorous and they do speed things up a bit if your research is unlikely to cause any harm
+- Ethics approval may involve providing:
+  - Experiment purpose
+  - Plans for recruitment
+  - Methodology
+    - Including how and what data will be collected, anonymized
+  - Artifacts (eg. a game being tested)
+  - Any instruments (e.g. surveys)
+  - Plans for obtaining informed consent from participants
+    - Do participants know they can leave the experiment?
+- All of this reviewed by a board which may provide feedback (usually revisions) before signing off on the experiment
+
+#### Independent Variables
+
+- **Independent Variables** =  circumstance or characteristic that is manipulated or systematically controlled to a change in a human response while the user is interacting with a computer
+  - We could compare one interface to another, e.g. a touchscreen display vs. VR headset
+  - We could compare one aspect of the environment to another, e.g. daylight vs. evening time
+  - factors in a factorial experiment
+    - We design experiments to compare levels within a factor
+
+- We can have multiple independent variables in an experiment
+  - We might do this because it's a lot of work to design and conduct an experiment
+- Problem : by manipulating more than one variable, we can have ***interaction effects*** between the independent variables
+  - If we're changing two things, there is a ***two way effect*** between the two independent variables
+  - Its harder to measure the ***main effect*** that each change has individually
+
+#### Dependent Variables
+
+- **Dependent Variables** = measured human behaviours (*in an HCI context*)
+  - examples:
+    - Performance time to complete a task
+    - Survey responses about which interface was preferred
+  - We can collect dependent variable data by:
+    - Observations of users
+    - Data logging within the application
+    - Instruments (such as ***surveys***)
+
+#### Other Variables
+
+- **Control Variables** = variables that could influence the experiment but are not under investigation
+  - e.g. lighting in the room, the type of device
+  - We can set control variables to specific values (unlikely to influence the experiment) and report those values
+    - At least in this way, the experiment can be reproduced
+- **Random Variables** = variables that are allowed to vary randomly as part of the experiment
+  - e.g. the ages of participants
+  - We can't really control these variables
+- **Confounding Variables** = circumstances or conditions that change systemically with an independent variable
+  - If we want to compare a VR headset to a conventional display, but a VR Headset uses a different input device than a conventional display, then the input device is a confounding variable
+    - Can't isolate comparing VR headset to conventional display *without* also having the game controller vary at the same time
+  - If we can't adjust (e.g. use the same game controller), we may need to acknowledge our independent variable is broader than headset vs. conventional display, and include the game controller
+
+#### Validity of Results
+
+- **Internal Validity** = the effects observed are due to the test conditions
+  - i.e. the differences in means on a dependent variable follow from the test conditions
+- **External Validity** = ability to generalize results to other people and other situations 
+- Decisions we make as part of our experiment design often *trade-off* between ***internal validity*** and ***external validity***
+  - ex. Reducing noise improves internal validity, comes at the cost of external validity
+
+#### Random v. Controlled Variables
+
+![image-20201208133438827](images/lecture/image-20201208133438827.png)
+
+#### Tasks
+
+- After we give participants the interface, we'll need to ask them to *do something* with it
+  - In the context of research, we'll call these ***tasks***
+  - Similar to usability testing in this regard
+- **Tasks** should be ***representative*** of real-world usage
+  - Improves external validity of the experiment
+- **Tasks** should ***discriminate*** between test conditions
+  - When we alter the **independent variables**, the tasks should be able to provide meaningful evidence
+- When we make **tasks** more real-world, it can come at the cost of **internal validity**
+  - Why? Involves the user pausing to think, or doing things outside the interface and then coming back to it later
+  - This better reflects real-world usage, improving external validity
+  - Exactly "what we are measuring" becomes less clear by the introduction of these additional variables
+  - Usability testing suffers from the same problem
+
+#### Participants
+
+- For results to apply to a **population**, the **sample** needs to come from that **population** such that it ***reflects and is representative*** of that **population**
+  - e.g. randomly selecting participants from a population
+  - Otherwise, how can results be generalized?
+  - Many, many, studies that reflect undergraduate student populations
+- Ensuring **participants** are ***randomly*** selected from a **population** is important
+  - Recruitment: word of mouth is less random than selecting undergraduate to participate
+- We can apply statistical tests to results to determine if the results are ***statistically significant***
+- **Statistical Significance** = property of a claim that states a result from data generated by testing or experimentation is not likely to occur randomly or by chance, but is instead likely to be attributable to a specific cause
+  - In order to obtain we need to have "enough" **participants**
+- Should we then test with large numbers of participants?
+  - Limiting factor: expensive in terms of cost and time
+- If we require a large amount of participants to find **statistical significance** then the difference is likely very small
+  - And if the difference is very small, do we even care about it anyways? 
+- **Rule of thumb:** use *similar* numbers of participants as in similar experiments
+  - We can also compute from **statistical tests** what number of participants is likely to produce statistically significant results if they are to be found
+
+#### Questionaires
+
+- **Questionnaires** / survey = Data collection tool provided to users at any point during the experiment
+  - Given before completing tasks typically collect demographic information and data about prior experiences
+  - Given after typically collects data related to the **task**
+    - Likert scales can be used to get quantitative data
+    - Open-ended questions can be used to get qualitative data
+
+#### Within-Subject v. Between Subject
+
+- **Within Subjects Experiment Design** =   when every participant is tested on each **level** of a **factor** 
+  - requires ***more time per participant***
+    - Harder to get time commitment
+  - More common in HCI
+  - Doesn't have overhead of **randomly** assigning **participants** to **task**
+  - ![image-20201208135630593](images/lecture/image-20201208135630593.png)
+- **Between Subjects Experiment Design** =  when a separate group of participants is used for each **level** of a **factor**
+  - requires ***more participants***
+    - non-trivial cost to recruit and run sessions
+  - Depends on **randomly** assigning **participants** to **tasks**
+  - ![image-20201208135645789](images/lecture/image-20201208135645789.png)
+- Sometimes we *don't* have a choice 
+  - If we do a test and the **independent variable** is between right-handedness and left-handedness
+
+#### Order Effects
+
+- **Order Effects ** = occur in **within-subject design** when the ***order*** of the interfaces alters the ***performance*** of ***participants***
+- **Learning Effect** =  where a **participant** does better on subsequent test conditions than prior test conditions due to ***learning*** that occurs during the prior test conditions 
+- **Fatigue Effect** = when the **participant's** **performance** worsens across test conditions due to fatigue
+- **Counterbalancing** = when we ***order*** test conditions to compensate for **order effects**
+  - e.g. if testing interface A vs. interface B, can give half the participants A followed by B and half B followed by A
+- **Latin Squares** = $n$ x $n$ tables where each of *n* symbols occurs only once in each column and each row
+  - ![2x2 - 5x5 Latin Squares](images/lecture/image-20201208151146349.png)
+    - 2x2 - 5x5 Latin Squares
+  - **Balanced Latin Squares** = each condition precedes and follows the other conditions an equal number of times (requires ***even number of conditions***)
+    - ![image-20201208151252130](images/lecture/image-20201208151252130.png)
+
+#### Counterbalancing
+
+- What if we have an off number of test levels?
+- The 3x3 latin square doesn't ensure each test condition precedes and follows the other test conditions an equal number of times
+- We can use all *n!* combinations instead
