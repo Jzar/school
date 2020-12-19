@@ -160,8 +160,6 @@ ex. Wifi Hotspot menu in iOS or Android
 - Number of clicks/taps required to perform a task
 - How many tasks can a user accomplish in a time period?
 
-
-
 #### Error Rates
 
 - **Errors per task**, **errors per time period**
@@ -292,9 +290,9 @@ Much more time consuming than wireframes, but very high fidelity
 
 ### User Analysis
 
-- **==User Analysis==** = determining *what* **characteristics** of our users may incluce the design of an interface
+- **==User Analysis==** = determining *what* **characteristics** of our users may include the design of an interface
 
-  - Closely related to, *but distince from* **task analysis**
+  - Closely related to, *but distance from* **task analysis**
   - **Task analysis** = analysis of how user tasks are performed to influence the design of our interface
 
   **User analysis** and **Tasks analysis** are often done together to *inform* and *guide* **user interface design**
@@ -347,8 +345,6 @@ Much more time consuming than wireframes, but very high fidelity
 
 - Web Content Accessibility Guidelines (WCAG)
 - Accessibility for Ontarians with Disabilities Act (AODA)
-
-
 
 #### Age
 
@@ -410,8 +406,6 @@ Much more time consuming than wireframes, but very high fidelity
 - **==User Research==** = focuses on understanding user behaviours, needs, and motiviations through observation techniques, task analysis, and other feedback methodologies
   - Technically done before design exists
 
-
-
 ##### User Research Techniques
 
 -  Individual interviews with users
@@ -450,6 +444,8 @@ Much more time consuming than wireframes, but very high fidelity
     2. This person groups the terms in whatever way they think is logical, and gives each group a category name, either from an existing card or by writing a name on a blank card
     3. Testers repeat this process across a group of test subjects
     4. The testers later analyze the results to discover patterns
+
+##### +
 
 ##### Interviews vs. Surverys
 
@@ -654,8 +650,6 @@ Convergent thinking and divergent thinking are often used as part of **design th
   - **Convergent thinking** is where we *make* **design decisions**
 
 Begs the question: ***how*** and ***why***? 
-
-
 
 ### Design Decisions
 
@@ -1184,7 +1178,7 @@ See recording:
 - Fundamentally: if you're asking a user to perform tasks, your application accomplishes while observing their behaviour, you're usability testing
 
 - **Test Plan**:
-  - Good usbaility tests document all details for how testing will occur
+  - Good usability tests document all details for how testing will occur
   - Not one-size-fits-all; tune to the interface, users, and goals
 - Participants need to be **recruited**
   - How many? From where? What demographics?
@@ -1895,7 +1889,7 @@ navigator.geolocation.getCurrentPosition(
 
 - **Direct Manipulations** = an interaction style defined by the follow 3 principles
 
-  1. Continuouse representations of objects and actions of interest with meaningful visual metaphors
+  1. Continuous representations of objects and actions of interest with meaningful visual metaphors
   2. Physical actions or presses of labeled interface objects (buttons) instead of complex syntax
   3. Rapid, incremental, reversible actions whose effects on objects of interest are visible immediately
 
@@ -3449,3 +3443,63 @@ navigator.geolocation.getCurrentPosition(
 - What if we have an off number of test levels?
 - The 3x3 latin square doesn't ensure each test condition precedes and follows the other test conditions an equal number of times
 - We can use all *n!* combinations instead
+- Number of levels of the factor must divide equally into the number of participants
+  - If we have 2 levels and 9 participants, we would have an uneven 4 vs. 5 participants
+  - If we had 2 levels and 40 participants, we could have 20 participants for each group
+- If we have counterbalanced successfully and the learning effect is the same from condition to condition
+  - We would expect mean performance levels to be the same across groups receiving different orders
+  - Despite different performance means per test condition
+
+#### Group Effects
+
+- **Asymmetric Skill Transfer** = when the **learning effect** for one order of testing is different than other orders of testing
+  - e.g. if A preceeding B improved performance far greater than if B preceedes A in the test order
+- A **group effect** occurs when the mean value for a dependent variable is different between groups
+  - A group effect can occur due to asymmetric skill stransfer
+
+### Longitudinal Study
+
+- **Longitudinal Study** = repeated observations over a prolonged period of time
+  - Can be used to track improvements in performance as practice is accumulated with an interface
+  - test new techniques against conventional techniques to determine the cross-over point (if any ) in performance 
+    - Can use this to estimate whether it is worthwhile to switch techniques
+
+### Results Analysis
+
+- Results can be reported similar to Usability Tests 
+- Experiments generally conducted with more participants than usability tests
+  - Averages, medians, min/max, and standard deviations all become more interesting data points
+  - Graphs and charts to visualize information become more relevant
+- With more participants and experiment methodology we can potentially have powerful results
+
+### Statistical Hypothesis Testing
+
+- **Statistical Hypothesis Testing** = can be used to determine if a result is statistically significant
+  - They effectively allow us to say that a result was not likely due to chance, with some degree of confidence
+- It's very important that we choose the variables, test and confidence levels in advance
+  - If we just apply statistical tests to all of the data we collect, we'll naturally find that ***some*** data appears statistically significant (if you flip a coin 20x in 1000 sessions)
+- A course or at least a background on statistics is required to really get into statistical hypothesis testing, which we cannot assume in this course
+
+## Exam Review
+
+- Two time slots
+  - Friday, December 11th 12:30PM - 3:00PM (Original)
+  - Saturday, December 12th 12:30AM - 3:00AM
+- 2 1/2 hours to complete, 30min of grace time for finishing up
+- Will be a quiz on avenue
+- Example exam is on avenue
+- Academic dishonesty obviously applies, no group work, can use notes though
+- Content submitted by you needs to be written by you during the exam
+  - Don’t copy off stackoverflow
+  - Avenue code is fair game though
+- Types of questions:
+  - Design an interface, possibly include a prototype, making and explaining any design decisions
+    - Can just take a picture of a sketch/wireframe
+  - Could be asked to write code to solve problems w/ technologies we discussed in lecture
+  - Could be asked opinion on a subject in HCI, and to justify based on what was taught in the course
+    - Justification is where the marks are
+  - Could be asked short-answer questions related to HCI theory taught in course
+    - Can involve creating items (task hierarchy, usability test instructions) or analyzing items, or other writing formats
+- Send any information through Avenue Mail Service
+- No proctoring because that’s a mess
+- **Don’t worry to much about small code errors or exact wireframes**. Get the idea down, and if you have time feel free to go iron out small errors

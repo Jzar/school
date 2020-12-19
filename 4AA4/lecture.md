@@ -1063,3 +1063,58 @@ holds for ***any time instant t*** chosen as follows:
 $t = k_jp_j$ 	$j \in (1,i)$, $k_j = (1,|\dfrac{p_i}{p_j}|)$
 
 $i$ is current, $j$ is past
+
+## Earliest Deadline First Scheduling
+
+### Deadline Monotonic (DM) Algorithm
+
+- **Deadline Monotonic** = another fixed priority scheduler
+  - Priorities are based on ***relative deadlines:*** *shorter* the deadline, *higher* the priority
+    - Versus RM, *shorter the period*, *higher the priority*
+  - If every task has the **period** equal to ***relative deadline***, same as RM 
+  - For arbitrary deadlines, **DM** algorithm performs better than **RM** algorithm 
+  - It may sometimes produce a feasible schedule when RM fails
+  - RM algoritm ***always*** fails if **DM** fails 
+
+   **Example**: DM v RM
+
+![image-20201212131043632](images/lecture/image-20201212131043632.png)
+
+![image-20201212131202018](images/lecture/image-20201212131202018.png)
+
+### Dynamic-priority Scheduling: Earliest-Deadline First (EDF)
+
+- **Earliest Deadline First** = the **task priorities** are *not* fixed but change depending upon the closeness of their **absolute deadlines**
+  - Processor always executes the **task** whose **absolute deadline** is the earliest
+    - Note: **absolute deadline** is the ***arrival time*** of a **task** plus its **relative deadline**
+  - If more than one tasks have the same **absolute deadlines**, randomly select one for execution next
+
+**Example**
+
+#### EDF Schedulability Tests
+
+- **Test 1:** A set of *n* periodic tasks, each of whose *relative deadline* is equal to or greater than its period can be feasibly scheduled by **EDF** **iff**:
+
+  $\displaystyle\sum^n_{i=1} \dfrac{e_i}{p_i} \leq 1$
+
+- **Test 2**: No simple test is available where the **relative deadlines** are *not equal to or greater than* their periods
+
+## Priority Inversion
+
+### Critical Sections
+
+- **Race condition** = when two or more processes are competing to use the same resource
+- **Mutual Exclusion** = resources can be used by one **task** at a time
+- **Serially Reusable** = a resource cannot be interrupted 
+- **Critical Section** = code that interacts with serially reusable resources
+  - Think using a websocket or reading a database
+
+We can ***avoid*** **race conditions** by making sure that ***no two processess/threads*** enter their **critical sections** at the same time
+
+### Mutex: At *Most* One Process can Hold it
+
+- ****
+
+## Root Locus
+
+### Final Value Theorem

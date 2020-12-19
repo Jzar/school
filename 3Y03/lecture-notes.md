@@ -571,3 +571,403 @@ Assumed $f_{X,Y}(x,y)$ is 0 outside of $R$
 
 #### Reproductive Property of the Normal Distribution
 
+- If $X_1, X_2, ... X_p$ are independent, normal random variables with $E(X_i) = \mu_i$ and $V(X_i) = \sigma^2_i$ for $i = 1,2, .. , p$ then:
+
+  ​	$Y = c + 0 + c_1X_1 + c_2X_2 + ... + c_pX_p$
+
+  is a *normal random variable* with
+
+  ​	$E(Y) = c_0 + c_1\mu_1 + c_2\mu_2 + ... + c_p\mu_p$
+
+  and
+
+  ​	$V(Y) = c_1^2\sigma^2_1 + ... + c_1^2\sigma_1^2$
+
+- This is to say, if Y is a ***linear combination*** of other random variables, its **mean** and **variance** are related in the same way
+
+### Numerical Summaries of Data
+
+#### Sample Statistics
+
+-  **Sample Mean** = $\bar{X} = \dfrac{\displaystyle\sum_{i=1}^n x_i}{n}$
+  - The average of all the values in a sample of a random variable
+  - ***average value of all oversations***
+- **Sample Variances** = $s^2 = \dfrac{\displaystyle\sum_{i=1}^n (x_i - \bar{X})^2}{n}$
+  - **Sample Standard Deviations** = $s$ , the positive square root of sample vairance
+- **Sample Range** = $r = \max(\textbf{X}) - \min(\textbf{X}) $
+
+### Stem and Leaf Diagrams
+
+- **Steam and Leaf Diagram** = visual display of a data set where each $x_i$ consists of at least 2 digits
+  - Steps:
+    1.  Divide each number $x_i$ into two parts: a **stem** consisting of one or more leading digits, and a **leaf** consisting of the remaining digit
+    2. List the **stem values** in a vertical column
+    3. Record the **leaf** for each observation beside its stem
+    4. Write the units for stems and leaves on the display
+
+### Frequency Distributions and Histograms
+
+- **Frequency Distribution** = compact summary of data , with the range divided into intervals called class intervals, cells, or bins
+
+  - Choose the number of bins approximately equal to the square root of the number of observations 
+  - \# bins = $\sqrt(N)$
+  - Relative frequencies are found by dividing the observed frequency in each bin by the total number of observation
+    - Provides the % of the population the class represents
+
+- **Histogram** = visual display of the frequency distribution
+
+  - Steps
+
+    1. Label the bin boundaries on a horizontal scale
+    2. Mark and label the vertical scale with the frequencies or the relative frequencies
+    3. Above each bin, draw a rectangle where height is equal to the frequency corresponding to that bin
+
+    ![image-20201218204859101](images/lecture-notes/image-20201218204859101.png)
+
+### Box Plots
+
+- **Box Plot** = Graphical display that simultaneously describes several important features of a data set, such as **centre, spread, departure from symmetry, ** and **outliers**
+
+  ![image-20201218205224461](images/lecture-notes/image-20201218205224461.png)
+
+## Week 8
+
+### Probability Plots
+
+- **Probability Plots** = empirical way to determine if data fits a particular distribution
+
+  - Suppose $S = \{x_1, ..., x_n\} \subset \mathbb{R}$ is some sample data
+  - Imagine we have a random variable X, and we want to know if the distribution of X fits the observed data
+  - Let $F(X)$ be the **cdf** of the function
+
+  1. Arrange the data points in increasing order and rename them if necessary
+  2. For each $1 \leq i \leq n$, choose a value $y_i \in \mathbb{R}$ such that 
+     1. $F(y_i) = P(X \leq y_i) = \dfrac{i-0.5}{n}$
+  3. Plot the pairs $(x_i,y_i)$
+  4. Draw a line of best fit
+
+  **Conclusion**: If all the points lay on or near the line, we can conclude that the distribution of X fits the data well, otherwise the fit is not so good
+
+  ​	Most of the time we will be concerned of discovering if our data fits the **standard normal distribution** $F(z) = \phi(z)$
+
+### Point Estimation of Parameters
+
+- Make prediction based on limited data
+- **Parameter Estimation** = a parameter, $\theta$ is any **numerical feature** of a **population**
+  - ex. we may want to estimate the **mean** or the **variance**
+  - Given a particular paramter, an estimator for $\theta$ is a **sample statistic** $\hat{\Theta} = h(X_1, ..., X_n)$ which we want to use to estimate $\theta$
+  - If $\hat{\Theta} = h(X_1, ..., X_n)$ is an estimator for $\theta$ and $(x_1,x_2,..., x_n)$ is some data, then the number $\hat{\theta} = h(x_1,...,x_n)$ is called a **point estimate for $\theta$**
+
+### Sample Distributions & the Central Limit Theorem
+
+- If $Y = h(X_1, ..., X_n)$ is a ***statistic*** then $Y$ is also a random variable
+- If the distribution associated to such a statistic is called a ***sampling distribution***:
+  - ex. if X is a random variable and $X_1, ..., X_n$ are all independent, with the same distribution as $X$, then the distribution of $\bar{X} = \dfrac{X_1 + ... + X_n}{n} $
+  - A **sampling distribution** depends on many factors, including the **sample size**, the **sample method**, the distribution of X, etc.
+
+#### Central Limit Theorem
+
+Suppose $X_1, ... X_{n+1}$ is a random sample (so *i.i.d*) taken from a distribtuion with **mean** $\mu$ and **variance** $\sigma^2$. IF:
+
+​	$\bar{X_n} = \dfrac{X_1+...+X_n}{n}$
+
+then
+
+​	$\dfrac{\bar{X_n} - \mu}{\dfrac{\sigma}{\sqrt{n}}}$
+
+converges in probability to $N(0,1)$, meaning
+
+​	$\displaystyle\lim_{n \rarr \infin} P(\dfrac{\bar{X_n} - \mu}{\dfrac{\sigma}{\sqrt{n}}} \leq z ) = \phi(z) $
+
+- For any sequence of *i.i.d* random variables $X_1, ... X_n$ (*discrete* or *continuous* ) if *n* is large enough we have 
+
+  $\bar{X_n} = \dfrac{X_1 + ... + X_n }{n} $ ~= $N(\mu, \frac{\sigma^2}{n})$
+
+  and so we may use the normal distributions in our calculations 
+
+- In practice, taking $n \geq 30$ is often large enough to get a good approximation
+
+- If the distribution of $X_i$ is nice enough (eg. symmetric, unimodal) then $\bar{X_n}$ is often approximately normal for $n \geq 5$
+
+### Unbiased Estimators
+
+- Let $\theta$ be a parameter for some population
+
+- Let $\hat{\Theta}$ be an estimator for $\theta$ 
+
+  -  ***bias of $\hat\Theta$*** = $E(\hat{\Theta}) - \theta $
+
+  -  ***bias***  = measure of how far away an estimator is from being correct ***on average***
+  - For any random sample, the average $\bar X$ is an ***unbiased estimator*** of the mean $\mu$ of $X = X_i$
+    - sample viaraince is also an ***unbiased estimator*** of variance
+  - However, sample standard deviation *is not* ***unbiased***\
+    - $E(S) - \sigma$ gets small as the sample gets large, and so S is still a pretty good estimator
+
+### Variance of Estimators
+
+- For a given parameter, $\theta$ , there is not *necessarily* a unique unbiased estimator of $\theta$
+  - ex. both **sample mean** and the **median** are unbiased estimators of the **mean**
+  - How should we pick the "best" estimator of a given parameter?
+- Given $\hat \Theta$ is *itself* a **random variable**, we can take the ***variance*** as a measure of the probability *mass* of the estimator away from $E(\hat \Theta) = \theta$
+  - if $\hat \Theta_1$ and $\hat \Theta_2$ are two unbiased estimators of $\theta$, and $V(\hat\Theta_1) < V(\hat\Theta_2)$ then (*on average*) a **point estimate** for $\theta$ via $\hat \Theta_1$ *will be closer* to $\theta$ than from $\hat \Theta_2$
+  - **to choose estimator: *minimize the variance***
+
+![image-20201219115448132](images/lecture-notes/image-20201219115448132.png)
+
+### Estimate Error
+
+- Another way to choose a good estimator is to minimize the **error**
+
+- Given $\hat \Theta$ , the ***standard error*** is:
+
+  $\sigma_{\hat \Theta} = \sqrt{V(\hat\Theta)}$
+
+  - If the **standard error** contains unknown parameters, they may be estimated and substituted into the standard error to obtain the ***estimated standard error***, denoted $S_{\hat\Theta}$
+
+### Biased Estimators
+
+- Sometimes, we have no choice but to use a **biased estimator**
+  - S is often used for $\sigma$
+- When using a **biased estimator**, it is often useful to measure error
+
+- **Mean Square Error** = $\text{MSE}(\hat\Theta) = E[(\hat\Theta - \theta)^2]$
+  - $\text{MSE}(\hat\Theta) = V(\hat\Theta) + (E(\hat\Theta) - \theta)^2$
+
+## Week 9 
+
+### Confidence Interval on the Mean of a Normal Distribution
+
+- An **interval estimate** for a **population parameter** is called a ***confidence interval***
+  - Suppose that $X_1,X_2, ... , X_n$ is a **random sample** from a **normal distribution** with unknown mean, $\mu$ and known variance $\sigma^2$, then the sample mean $\bar{X}$ is **normally distributed** with $\mu, \sigma^2$ , 
+    - We may **standardize** $\bar X$ by $Z = \dfrac{\bar X - \mu}{\sigma / \sqrt(n)}$
+  - **confidence interval estimate for $\mu$** = interval of the form $l \leq \mu \leq u$
+    - endpoints $l, u$ are computed from the sample data
+    - Because different samples will produce different values, these are random variables $L$ and $U$
+      - $P\{L \leq \mu \leq U\} = 1 - \alpha$ 
+      - **Confidence Coefficient**
+
+![image-20201219120607594](images/lecture-notes/image-20201219120607594.png)
+
+![image-20201219120624771](images/lecture-notes/image-20201219120624771.png)
+
+#### Confidence Interval: Mean & Variance Unknown
+
+![image-20201219120636955](images/lecture-notes/image-20201219120636955.png)
+
+#### Normal Approximation for Binomial Proportion
+
+![image-20201219120646351](images/lecture-notes/image-20201219120646351.png)
+
+## Week 10
+
+### Hypothesis Testing for a Single Variable
+
+- **Statistical Hypothesis** = a statement about parameters of one or more populations
+  - general structure consists of a ***guess*** and an ***alternate guess***
+
+#### Structure of a Hypothesis Test
+
+- **$H_0$** = ***Null Hypothesis*** (statement initially assumed true)
+  - Usually of the form $\theta = r$, for some r
+  - We may guess $\mu = 50$
+- $H_1$ = ***Alternate Hypothesis*** ( statement that contradicts the *null hypothesis*)
+  - If $H_0=\theta = r$, $H_1$ may be
+    - $\theta \ne r$ (two sided alternate hypothesis)
+    - $\theta \geq r$ (upper one-sided alternate hypothesis )
+    - $\theta \leq r$ (lower one-sided alternate hypothesis)
+
+#### Procedure
+
+1. Assume $H_0$
+2. Consider the data: is there something that is very unlikely, implausible given $H_0$
+3. If YES: reject *null hypothesis* in favour of $H_1$
+4. If NO, accept $H_0$
+
+#### Objectives
+
+- Testing if a parameter has changed
+- Testing a theory
+- Conformance testing
+
+#### Method
+
+1. Assume $H_0$
+2. Pick an estimator for your parameter $\hat \Theta(X_1,..., X_n)$
+   1. For example, if the paramater of interest is $\mu$, we could choose the sample mean $\bar X$
+3. Choose a ***critical region***, determined by some critical values
+   1. For example, for $\theta \ne r$, choose critical region to be the complement
+      1. $C = \mathbb{R}/(r-l, r+u)$ for critical values $r-l$ and $r+u$
+4. Take a sample $x_1, ..., x_n$ and compute a point estimate $\hat \theta = \hat \Theta(x_1, ..., x_n)$
+5. Is the point estimate in the critical region? In other words, $\hat \theta \in C$
+
+#### Outcomes 
+
+![image-20201219121841749](images/lecture-notes/image-20201219121841749.png)
+
+#### Fixed Significance Level Testing
+
+- One way to determine a **critical region** is to require that our test has a ***fixed significance level*** $\alpha$ 
+  - Recall: $\alpha$ is the probability that we incorrectly reject $H_0$, given that $H_0$ is true
+- Suppose that $\hat\Theta$ is an estimator for a parameter $\theta$ and that we have a null hypothesis $H_0$ : $\theta = r$ and a $H_1:$ $\theta \ne r$ 
+  - We fix a ***significance level*** $\alpha$ 
+  - Choose critical values based on this value
+  - We choose aim to find a symmetric region defined by critical values $r - a$ and $r + a$
+    - ![image-20201219122114707](images/lecture-notes/image-20201219122114707.png)
+
+### P- Values
+
+- **P-Values** give a more dynamic approach to hypothesis testing 
+
+  - Suppose we have a test with null hypothesis $H_0$ 
+
+  - **P-Value of the test** = smallest *significance level* that would lead to a rejection of $H_0$ with the sample 
+
+    - P-value as the probability of being in a sort of variable critical region
+    - Sometimes called **observed significance**
+
+  - Consider $H_0: \theta = r$ and $H_1: \theta \ne r$ , and $\hat\Theta(X_1, ... , X_n)$
+
+    - suppose $\hat\theta = \hat\Theta(x_1, ... , x_n)$
+
+    - assuming $H_0$, our "observed" critical values are $r \pm | r- \hat\theta | $
+
+    - Then the **P-Value Test** is:
+
+      ![image-20201219122657937](images/lecture-notes/image-20201219122657937.png)
+
+  - P-value of the observation is the probability of making an observation ***at least as far from $\theta = r$ as $\hat\Theta$***
+
+    - Measure of the *risk* that we make an incorrect decision if we reject $H_0$ based on sample data
+    - If we make an observation / point estimate that has a very high P-value, then we are at ***high risk*** of making a Type 1 error if we reject $H_0$
+
+- We can use P-values to refine the *fixed significance level testing procedure*
+
+  - Fix a significance level $\alpha$ and construct a **critical region** based on $\alpha$
+  - The observed value $\hat\theta$ in the **critical region** iff ($\iff$ )the P-value is ***at most*** $\alpha $, and so we reject $H_0$ iff $P-value \leq \alpha$
+  - Accept  $H_0  \iff P-value > \alpha$ 
+
+### Relationship between Hypothesis Testing and Confidence Intervals
+
+- Let $\theta$ be an unknown paramter
+  - There is a close relationship between **hypothesis test ** and **confidence intervals ** for $\theta$
+  - suppose (L, U) is a $100(1 - \alpha)$ confidence interval for $\theta$ constructed around a point estimate $\bar\theta$
+    - Consider a $H_0 : \theta = r, H_1: \theta \ne r$ 
+    - Then the observation $\hat\theta$ leads to a rejection of $H_0$ , iff ($\iff$)$r \notin (L,U)$
+    - This gives us an equivalent way of performing **fixed significance testing**
+      1. Given a test $H_0: \theta = r, H_1: \theta \neq r$
+         1. Choose a test statistic $\hat\Theta$ and a **significance level** $\alpha$
+         2. For a point estimate, $\hat\theta = \hat\Theta(x_1,...,x_n)$ construct the $100(1-\alpha)\%$ **confidence interval** around $\hat\theta$
+         3. If $r \in (L,U)$, accept $H_0$
+         4. If $r \notin (L,U)$, reject $H_0$ in favour of $H_1$
+
+## Week 11
+
+### Tests on the Mean of a Normal Distribution Variance Known
+
+![image-20201219123838747](images/lecture-notes/image-20201219123838747.png)
+
+### Type II Error and Choice of Sample Size
+
+$ H_0 = \mu = \mu_0$, $H_1: \mu \neq \mu_0$
+
+- Suppose that the *null hypothesis* is **false** 
+- Assume true value of the mean is $\mu = \mu_0 + \delta$
+  - Therefore, $\delta$ = $\mu - \mu_0$ , or **predicted mean** minus **sample mean**
+- Then, when $H_1$ is true, the **distribution of the test statistic $Z_0$** is
+  - $Z_0 \sim N(\dfrac{\delta * \sqrt n}{\sigma},1)$
+
+![image-20201219124241179](images/lecture-notes/image-20201219124241179.png)
+
+One may easily obtain formulas that determine the appropriate sample size to obtain a particular value of $\beta$ for a given $\alpha$ and $\delta$
+
+![image-20201219124609406](images/lecture-notes/image-20201219124609406.png) 
+
+### Tests on the Mean of  a Normal Distribution, Variance Unknown
+
+- We $n$ is *large enough*, the **sample standard deviation**, $S$, can be substituted for $\sigma$ in the test procedures *with little effect*
+  - Although we have given a test for the **mean** of a normal distribution with known $\sigma^2$, it can be easily converted into a ***large-sample test procedure*** for unknown $\sigma^2$
+    - Valid regardless of the form of the distribution of the population
+    - Relies on the **Central Limit Theorem**, just as the ***large-sample confidence interval on $\mu$*** did
+- **Test Statistic** = $T_0 = \dfrac{\bar X - \mu_0}{\dfrac{S}{\sqrt n}}$
+
+#### Summary
+
+![image-20201219125117529](images/lecture-notes/image-20201219125117529.png)
+
+## Week 12
+
+### Tests on a Population Proportion
+
+- Modelling the occurrence of defectives with the **binomial distribution** is usually reasonable when the **binomial parameter *p* represents the proportion of defective items produces**
+  - Consequently, many engineering decision problems involve **hypothesis testing** about *p*
+  - An approximate test based on the **normal approximation** to the **binomial** is given
+    - Procedure will be valid as long as **$p$ is not extremely close to 0 or 1**
+    - **sample size** is relatively large
+  - Let X be the *number of observations in a random sample of size $n$*  that belongs to the **class** associated with $p$
+    - If $H_0: p = p_0$ is true:
+      - $X \sim N[np_0, np_0(1p_0)]$
+      - $Z_0 = \dfrac{X - np_0}{\sqrt{np_0(1-p_0)}}$
+
+![image-20201219130302866](images/lecture-notes/image-20201219130302866.png)
+
+### Type II Error and Choice of Sample Size
+
+![image-20201219130332072](images/lecture-notes/image-20201219130332072.png)
+
+### Hypotheses Tests on the Difference in Means, Variances Unknown
+
+#### Case 1: $\sigma^2_1 = \sigma_2^2 = \sigma^2$
+
+- This means, the standard deviation of the two random variables is the same
+
+$H_0: \mu_1 - \mu_2 = \Delta_0$, $H_1: \mu_1 - \mu_2 \ne \Delta_0 $
+
+- Let $X_{11}, ..., X_{1n_1}$ be a random sample of $n_1$ observations from *first* population
+- Let $X_{21}, ... , X_{2n_2}$ be a random sample of $n_1$ observations from the *second* population
+- Let $\bar X_1, \bar X_2, S^2_1, S^2_2$ be the *sample means* and *sample variances* respectively
+- **Expected Value** of the ***difference in means*** = $\bar X_1 - \bar X_2 = E(\bar X_1 - \bar X_2)$
+  - Therefore $\bar X_1 - \bar X_2$ is an ***unbiased estimator*** for the **difference in means**
+- **Variance** of $\bar X_1 - \bar X_2 = V(\bar X_1 - \bar X_2) = \sigma^2 (\dfrac{1}{n_2}+\dfrac{1}{n_2})$
+
+![image-20201219131000775](images/lecture-notes/image-20201219131000775.png)
+
+![image-20201219131012486](images/lecture-notes/image-20201219131012486.png)
+
+### Case 2: $\sigma_1^2 \ne \sigma_2^2$
+
+#### Test Statistic for the Difference in Means: Variance Unknown and Not Assumed Equal
+
+![image-20201219131221306](images/lecture-notes/image-20201219131221306.png)
+
+### Empirical Models
+
+- **Regression Analysis** = The collection of statistical tools are used to **model** and *explore* relationship between variables in a non-deterministic manner
+
+  - Only one independent or predictor variable, $x$
+
+    - Study  the relationship with the response, $y$, which is assumed to be linear
+
+    - Reasonable to assume the mean of $Y$ is related to $x$ by
+
+      $Y = \beta_0 + \beta_1x + \epsilon$
+
+      - Slope and intercept of the line are called **regression coefficients**
+      - $\epsilon$ is the **random error term**
+
+    - We call this model the **simple linear regression** model
+
+      - It only has one independent variable, or ***regressor***
+
+    - Suppose that the **mean** and **variance** of $\epsilon$ are 0 and $\sigma^2$
+
+      Then:
+
+      ​	$E(Y | x) = \beta_0 + \beta_1x)$ and $V(Y|x) = \sigma^2$
+
+![image-20201219131933473](images/lecture-notes/image-20201219131933473.png)
+
+![image-20201219131942854](images/lecture-notes/image-20201219131942854.png)
+
+![image-20201219131953951](images/lecture-notes/image-20201219131953951.png)
+
+![image-20201219132005550](images/lecture-notes/image-20201219132005550.png)
